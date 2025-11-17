@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<!--
+- books (in no particular order)
+  - https://www.amazon.com/Simple-Money-No-Nonsense-Personal-Finance/dp/0801018862/
+  - https://www.amazon.com/Stacked-Super-Serious-Guide-Modern-Management/dp/B093MNYKLP/
+  - https://www.amazon.com/Money-Out-Loud-Financial-Taught/dp/0063067366/
+  - https://www.amazon.com/Will-Teach-You-Rich-Second/dp/1523505745/
+  - https://www.amazon.com/Coffeehouse-Investors-Ground-Rules-Happiness/dp/B08S1PKY3C/
+  - https://www.amazon.com/The-Index-Card-audiobook/dp/B0195BKC0W/
+  - https://www.amazon.com/Only-Budgeting-Book-Youll-Ever/dp/1440550107/
+  - https://www.amazon.com/Building-Wealth-Being-Happy-Independence/dp/1540392864/
+  - https://www.amazon.com/Work-Optional-Tanja-Hester-audiobook/dp/B07N8GRLCP/
+  - https://www.amazon.com/More-Money-Please-Financial-Secrets/dp/0452298431/
+  - https://www.amazon.com/Soul-Money-Transforming-Your-Relationship/dp/0393353974/
+  - https://www.amazon.com/One-Page-Financial-Plan-Simple-Smart/dp/1591847559/
+  - https://www.amazon.com/Heads-Win-Tails-Smart-Investors/dp/0399563202/
+  - https://www.amazon.com/What-Should-Do-My-Money/dp/B0BTMTYS3R/
+  - https://www.amazon.com/Quit-Like-Millionaire-audiobook/dp/B07TXRVFD2/
+  - https://www.amazon.com/Your-Money-or-Your-Life-audiobook/dp/B07DLBZ5DW/
+  - https://www.amazon.com/Millionaire-Fastlane-Crack-Wealth-Lifetime/dp/B0146TGBZ8/
+-->
+<html>
+  <head>
+    <link rel="stylesheet" href="reveal.js/dist/reveal.css" />
+    <link rel="stylesheet" href="reveal.js/dist/theme/white.css" />
+    <style type="text/css">
+      .reveal ul, .reveal ol { text-align: left;
+                               list-style-position: inside; }
+      .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5 {text-transform: none; }
+      .reveal .slides { background-image: url('img/logo_tree-book_light_opacity-05.png');
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-blend-mode: lighten;
+                        background-size: 80%; }
+      .container { display: flex; }
+      .col { flex: 1 }
+    </style>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+	<!-- timing
+	     - intro: 5 mins
+	     - FI basics: 10 mins
+	     - FI basics++: 5 mins
+	     - FI intermediate: 10 mins
+	     - QnA: 5 mins
+	     - FI advanced: 20 mins
+	     - students: 5 mins
+             - Wrapping up: 5 mins
+             - QnA: 20 mins
+          -->
+        <!-- ---------------------------------------- intro hook ------------------------------------- -->
+        <section></section> <!-- empty slide before video shows up -->
+        <section>
+          <h3>thank you!</h3>
+          <aside class="notes" data-markdown>
+          - dear brothers and sisters
+          - before I start this session, I want to thank the D. G. Pol Nursing College for giving me this opportunity to speak to you all. i also want to thank the Rotary club of Navi Mumbai Samaritans, of which i am a member, for connecting me with you all!
+          <!-- - for this session, there is just 1 rule: participate. only that will help you get the most from this session. let us make this interactive, rather than a boring podcast where i talk and you listen -->
+          - so, without further ado, let's start!
+          </aside>
+        </section>
+        <section>
+          <video controls id="video">
+            <source src="img/Kaun_Banega_Crorepati.mp4" type="video/mp4">
+          </video>
+        </section>
+        <section>
+          <p>who wants to become a crorepati?</p>
+          <p class="fragment">why?</p>
+          <p class="fragment">why not?</p>
+          <aside class="notes" data-markdown>
+          - these are good reasons. remember them as we go through the session
+          - if i can convert atleast 1 "no" person into a "yes", i'll consider the session successful
+          </aside>
+        </section>
+        <!-- ---------------------------------------- profile ---------------------------------------- -->
+        <section>
+          <h1>Kaise Banoge Crorepati?</h1>
+          <h3>-- Abhi Sawant</h3>
+        </section>
+        <section>
+          <h2>about me</h2>
+          <aside class="notes" data-markdown>
+          - i am Rtn Abhi Sawant
+          <!-- - check https://www.weekday.works/people/pradnyesh-sawant-spradnyesh for updated info -->
+          </aside>
+        </section>
+        <section>
+          <h3>ex-IIT</h3>
+          <img src="img/IIT_Guwahati_Logo.svg_-1014x1024-2506732598.webp" width="50%">
+          <aside class="notes" data-markdown>
+          - completed M.Tech in CSE from IIT Guwahati
+          </aside>
+        </section>
+        <section>
+          <h3>ex-Yahoo!</h3>
+          <img src="img/ICC_World_T20_Image_036.jpg" width="70%">
+          <aside class="notes" data-markdown>
+          - worked on various websites like cars.yc, autos.yc, entertainment.yc, and even a social network called "SpotM"; those were the early days of social networks, even before facebook
+          - i started as a backend engg, but moved to FE, thus doing full-stack development which helped me tons later in my life
+          </aside>
+        </section>
+        <section>
+          <h3>ex-Samsung (South Korea)</h3>
+          <img src="img/0_Owr7QxPoLOGnC44c-3032723902" width="80%">
+          <aside class="notes" data-markdown>
+          - led team that was responsible for server side implementation of in-app purchases (eg, buying coins in a game using Samsung tech in Samsung play store)
+          </aside>
+        </section>
+        <section>
+          <img src="img/2025-02-05_22-20.png">
+          <p>registered my own software development company in 2014</p>
+          <aside class="notes" data-markdown>
+          - any guesses what was the company about?
+            - using ML to predict future stock prices
+          - didn't work; so came back to industry
+          </aside>
+        </section>
+        <section>
+          <h3>ex-Mindseed</h3>
+          <img src="img/Screenshot_2016-08-03-21-54-19_com.android.vending.png" width="25%">
+          <img src="img/IMG_20170218_113552.jpg" width="30%">
+          <img src="img/IMG_20170218_113541.jpg" width="30%">
+          <aside class="notes" data-markdown>
+          - based on "every child is unique and learns differently. if you judge an elephant by his ability to climb a tree, he will spend his whole life thinking he is stupid"
+            - personalized education
+          - 1st engineer; developed whole software single handedly; hired team
+          - left due to financial issues
+          </aside>
+        </section>
+        <section>
+          <h3>ex-Flipkart</h3>
+          <img src="img/00_-_dribbble_shot-quiz_time_4x.webp" width="70%">
+          <aside class="notes" data-markdown>
+          - led team that created games in FK for 1st time; trivia, pictionary, cricket
+            - handled fraud, since real prizes like mobile phones, etc
+          - led team that managed email, sms, notifications to FK users
+          </aside>
+        </section>
+        <section>
+          <h3>ex-Amazon India</h3>
+          <img src="img/th-2621795722" width="70%">
+          <aside class="notes" data-markdown>
+          - my team owned Pantry (before it got replaced by Fresh)
+          </aside>
+        </section>
+        <section>
+          <h3>ex-Amazon USA</h3>
+          <img src="img/IMG_20220630_134345954_HDR.jpg" width="70%">
+          <aside class="notes" data-markdown>
+          - my team was responsible for all video ads on Search page. so if you find something weird w/ the videos, then you know who to blame ;)
+          </aside>
+        </section>
+        <section>
+	  <img src="img/rotary_navi-mumbai-samaritans.jpeg">
+        </section>
+        <section>
+          <p>why does all this matter to you?</p>
+        </section>
+        <section>
+          <h3><i>i got <b><span style="color:red">FIRE</span></b>d at the age of <b>42</b></i></h3>
+          <p class="fragment"><b><span style="color:red">F</span></b>inancially <b><span style="color:red">I</span></b>ndependent, <b><span style="color:red">R</span></b>etired <b><span style="color:red">E</span></b>arly</p>
+          <p class="fragment">"Retired Early" is optional<img src="img/32-326384_smiley-clipart-eyelash-wink-emoji-2359743815.png" width="50px" height="50px" style="margin: -10px 0 0 20px"></p>
+          <!-- coincidentally, the answer to the ultimate question is 42 (-- hitchhikers guide to the galaxy) -->
+          <h3 class="fragment">& i can teach you to be FI</h3>
+        </section>
+        <section>
+          <h3>my benefits of becoming FI</h3>
+          <ul>
+            <li class="fragment">retired from corporate life (aka "rat race")</li>
+            <li class="fragment">master of my time</li>
+	    <ul>
+	      <li class="fragment">volunteered with TFI as 9th grade Maths teacher in Govandi, Mumbai</li>
+	      <li class="fragment">2 years full time TFI fellowship (at the same school)</li>
+	      <li class="fragment">spreading knowledge about "how to become Financially Independent"</li>
+	    </ul>
+	  </ul>
+        </section>
+        <section>
+          <h3>master of my time</h3>
+          <ul>
+            <li class="fragment">sleep</li>
+            <li class="fragment">hobbies</li>
+            <li class="fragment">most importantly though,</li>
+          <ul>
+            <li class="fragment">parents</li>
+            <li class="fragment">not scared of emergencies</li>
+	  </ul>
+	  </ul>
+        </section>
+        <section>
+          <h5>what does it mean to be FI?</h5>
+          <h3 class="fragment"><code style="color:green">passive income >> expenses</code></h3>
+        </section>
+        <section>
+          <h3>Rich v/s Wealthy</h3>
+          <img class="fragment" src="img/WhatsApp Image 2025-02-06 at 20.06.03.jpeg" width="70%" alt="rich v/s wealthy">
+          <aside class="notes" data-markdown>
+          - any guesses?
+          - a rich person sells his time to earn money
+          - a wealthy person earns money even when he is sleeping
+          </aside>
+        </section>
+        <section>
+          <h3>we want to become <span style="color:green">Wealthy</span>, not <span style="color:red">Rich</span>!</h3>
+	  <h5 class="fragment"><span style="color:green">i.e. Financially Independent</span></h5>
+          <!-- <p class="fragment">"Retired Early" is optional<img src="img/32-326384_smiley-clipart-eyelash-wink-emoji-2359743815.png" width="50px" height="50px" style="margin: -10px 0 0 20px"></p> -->
+        </section>
+        <section>
+          <h3><span style="color:red">NOT</span> a Certified Financial Advisor</h3>
+          <h5 class="fragment">sharing based on my own knowledge and experience</h5>
+        </section>
+        <section>
+          <h3><span style="color:red">NOT</span> where/how to investment</span></h3>
+        </section>
+        <!-- ---------------------------------------- FI novice ---------------------------------------- -->
+        <section><h2>FI basics</h2></section>
+        <section>
+          <h3>Bunty aur Babli</h3>
+          <img src="img/th-2532363956" width="50%">
+          <p><small>Note: This is a work of fiction. Names, characters, places and incidents either are products of the author’s imagination or are used fictitiously. Any resemblance to actual events or locales or persons, living or dead, is entirely coincidental.</small></p>
+        </section>
+        <section>
+          <h3>Bunty</h3>
+          <ul>
+            <li class="fragment">earns INR 25,000/- per month</li>
+            <li class="fragment">spends 22,500/- on loan EMI, groceries, utilities, entertainment, etc</li>
+            <li class="fragment">i.e. he saves 2,500/- per month</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Babli</h3>
+          <ul>
+            <li class="fragment">earns INR 25,000/- per month</li>
+            <li class="fragment">spends 20,000/- on loan EMI, groceries, utilities, entertainment, etc</li>
+            <li class="fragment">i.e. she saves 5000/- per month</li>
+          </ul>
+        </section>
+        <section>
+          <h3>time to become a Crorepati</h3>
+          <ul>
+            <li class="fragment">Bunty</li>
+            <ul>
+              <li class="fragment">100,00,000 / 2,500 / 12</li>
+              <li class="fragment">= 333 years</li>
+            </ul>
+            <li class="fragment">Babli</li>
+            <ul>
+              <li class="fragment">100,00,000 / 5,000 / 12</li>
+              <li class="fragment">= 167 years</li>
+            </ul>
+          </ul>
+        </section>
+        <section>
+          <h3>Babli-2</h3>
+          <ul>
+            <li class="fragment">invests in SIP</li>
+            <li class="fragment">at 10% annual compound interest</li>
+            <li class="fragment">how much time will it take to reach 1 Cr?</li>
+            <h4 class="fragment">~31 years</h4>
+            <li class="fragment">remember, Babli-1 had taken <b>167 years</b></li>
+            <h4 class="fragment">that's the power of COMPOUNDING!</h4>
+          </ul>
+        </section>
+        <section>
+          <h3>Babli-3</h3>
+          <ul>
+            <li class="fragment">invests 7,500</li>
+            <li class="fragment">i.e. saves more, and hence invests more</li>
+            <li class="fragment">how much time will it take to reach 1 Cr?</li>
+            <h4 class="fragment">~27 years</h4>
+            <li class="fragment">remember, Babli-2 had taken ~31 years</li>
+            <h4 class="fragment">i.e. savings amount has a direct impact on time</h4>
+          </ul>
+        </section>
+        <section>
+          <h3>Babli-4</h3>
+          <ul>
+            <li class="fragment">same as Babli-2 (i.e. 5,000 savings) , but increases investments by 10% per year</li>
+            <li class="fragment">how much time will it take to reach 1 Cr?</li>
+            <h4 class="fragment">~24 years</h4>
+            <li class="fragment">remember, Babli-2 had taken ~31 years</li>
+            <li class="fragment">and Babli-3 had taken ~27 years; despite a higher starting amount</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Chulbuli</h3>
+          <ul>
+            <li class="fragment">earns 1L per month; i.e. 4 times as much as Bunty and Babli</li>
+            <li class="fragment">but she spends 1L per month</li>
+            <li class="fragment">how much time will it take to reach 1 Cr?</li>
+            <h4 class="fragment">i.e. how much you save and invest matters much more than how much you earn</h4>
+          </ul>
+        </section>
+        <section>
+          <h3>Bunty v/s Babli</h3>
+          <img src="img/2025-06-01_11-28.png" width="80%">
+	  <small>
+          <ul>
+            <li class="fragment">notice that Babli-4 overtakes Babli-3 at ~10 years</li>
+            <h4 class="fragment">i.e. you can start small, but discipline is important</h4>
+          </ul>
+	  </small>
+        </section>
+        <section>
+          <h3><code>passive <span style="color:green">income >> expenses</code></h3>
+        </section>
+        <section>
+          <h3>increase income</h3>
+          <ul>
+            <li class="fragment">work harder</li>
+            <li class="fragment">work smarter</li>
+            <ul>
+              <li class="fragment">upskill (invest in your own education)</li>
+              <li class="fragment">partner / collaborate</li>
+              <li class="fragment">network / improve connections</li>
+            </ul>
+            <li class="fragment">work harder <b>and</b> smarter</li>
+            <li class="fragment">great talent cannot beat good talent + great hard work</li>
+          </ul>
+        </section>
+        <section>
+          <h3>decrease expenses</h3>
+          <h5><p class="fragment" style="color:green">focus on needs</p></h5>
+          <ul>
+            <li class="fragment">रोटी, कपडा, मकान</li>
+            <li class="fragment">medical needs / insurance</li>
+            <li class="fragment">education (for kids, <b>and</b> self)</li>
+          </ul>
+          <h5><p class="fragment" style="color:red">reduce wants</p></h5>
+          <ul>
+            <li class="fragment">entertainment, social status</li>
+            <li class="fragment">don't eliminate wants completely</li>
+            <li class="fragment">do <b>NOT</b> buy on credit card if cannot pay in full at end of month</li>
+          </ul>
+        </section>
+        <section>
+          <h3>lessons</h3>
+          <h5 class="fragment">3 step path to FI</h5>
+	  <ul>
+	    <li class="fragment" style="color:green">Earn</li>
+	    <li class="fragment" style="color:green">Save</li>
+	    <li class="fragment" style="color:green">Invest</li>
+	  </ul>
+	  <ul>
+	    <li class="fragment">you <b>CANNOT</b> reach FI if you skip/miss any step</li>
+	    <li class="fragment">you <b>DON'T</b> need anything fancy or risky to reach FI</li>
+	    <li class="fragment">most people don't reach FI because they focus only on "Earn"; like Chulbuli</li>
+	  </ul>
+          <aside class="notes" data-markdown>
+	  - people want to earn more, but no one wants to save & invest; these people will never become FI
+          </aside>
+        </section>
+        <section>
+          <h3>summary</h3>
+          <ul>
+            <li class="fragment">you can only invest that which you save, so</li>
+            <li class="fragment">increase savings</li>
+            <li class="fragment">but Savings = Income - Expenses, so</li>
+            <ul>
+              <li class="fragment">increase income, and</li>
+              <li class="fragment">decrease expenses</li>
+            </ul>
+            <li class="fragment">invest regularly
+            <ul>
+              <li class="fragment">don't try to time the market</li>
+            </ul>
+            <li class="fragment">start early</li>
+            <ul>
+              <li class="fragment">compounding needs time</li>
+            </ul>
+          </ul>
+        </section>
+        <!-- ---------------------------------------- FI intermediate ---------------------------------------- -->
+        <section><h2>FI intermediate</h2></section>
+        <section>
+          <h3>good v/s bad debt</h3>
+          <h5 style="color:green" class="fragment">good:</h5>
+          <ul>
+            <li class="fragment">very long term</li>
+            <li class="fragment">low interest rates</li>
+            <li class="fragment">tax benefits</li>
+            <li class="fragment">eg: home loan, education loan, etc</li>
+          </ul>
+          <h5 style="color:red" class="fragment">bad:</h5>
+          <ul>
+            <li class="fragment">short term</li>
+            <li class="fragment">high interest rates</li>
+            <li class="fragment">eg: personal loan, car loan, etc</li>
+            <li class="fragment">not paying credit card balance in FULL, EVERY MONTH is <b>WORST</b></li>
+          </ul>
+        </section>
+        <section>
+          <h3>Avalanche method</h3>
+          <aside class="notes" data-markdown>
+          - EMIs are expenses; reduce them
+          - avalanche method
+            - largest to smallest based on interest rates
+            - most effective
+          </aside>
+        </section>
+        <section>
+          <h3>Snowball method</h3>
+          <aside class="notes" data-markdown>
+          - snowball method
+            - smallest to largest; w/o worrying about interest rates
+            - best for emotional people who need "small wins"
+          </aside>
+        </section>
+        <section>
+          <h3>eliminate loan</h3>
+          <p><img src="img/rmobile-3667789690.jpg" width="100%"></p>
+        </section>
+        <section>
+          <h3>eliminate loan</h3>
+          <img src="img/8251c5f4e5f02b694ea6da5fee02054a.jpg" width="30%">
+          <aside class="notes" data-markdown>
+          - use trackers for motivation
+          - you can use similar trackers for goals for savings, etc
+          </aside>
+        </section>
+        <section>
+          <h3>increase savings</h3>
+          <aside class="notes" data-markdown>
+          - automate (similar to TDS (deduct at source))
+          - helps build discipline
+          </aside>
+          <ul>
+            <li class="fragment">TDS (pay yourself first)</li>
+            <li class="fragment">automate</li>
+            <li class="fragment">start with 10% of income</li>
+            <li class="fragment">slowly increase savings %</li>
+            <li class="fragment">improve lifestyle at a lesser rate than increase in income</li>
+          </ul>
+        </section>
+        <section>
+          <h3>debt / savings trackers</h3>
+          <img src="img/8251c5f4e5f02b694ea6da5fee02054a.jpg" width="30%">
+          <aside class="notes" data-markdown>
+          - use trackers for motivation
+          - you can use similar trackers for goals for savings, etc
+          </aside>
+        </section>
+        <section>
+          <h3>expense tracking</h3>
+          <img src="img/excel-monthly-spending-tracker-3_2colm-3373054806.jpg" width="40%">
+	  <div class="fragment">track for a few months before you go to next steps</div>
+        </section>
+        <section>
+          <h3>expense tracking ...</h3>
+          <ul>
+            <li class="fragment">more than the tool, you need discipline</li>
+            <li class="fragment">track for a few months before you go to next steps</li>
+          </ul>
+        </section>
+        <section>
+          <h3>budget</h3>
+          <img src="img/personal-budget-spreadsheet-08-scaled-1097121159.jpg" width="40%">
+        </section>
+        <section>
+          <h3>rinse and repeat</h3>
+          <ul>
+            <li class="fragment">create and update budget a few times</li>
+            <li class="fragment">needs+wants v/s savings needs to stabilize</li>
+            <li class="fragment">more than the tool, you need discipline; especially for tracking</li>
+          </ul>
+        </section>
+        <section>
+          <h5>most importantly, remember that</h5>
+          <h5 class="fragment">life is not an excel sheet</h5>
+          <h3 class="fragment"><span style="color:green"><b>have fun!</b></span></h3>
+        </section>
+        <section><h3>QnA</h3></section>
+        <!-- ---------------------------------------- FI advanced ---------------------------------------- -->
+        <section><h2>FI advanced</h2></section>
+        <section>
+          <h3>legal money printing press</h3>
+        </section>
+        <section>
+          <h3>fishermen</h3>
+        </section>
+        <section>
+          <h3>insurance</h3>
+          <h5 class="fragment">term insurance</h5>
+          <h5 class="fragment">health insurance</h5>
+          <ul>
+            <li class="fragment">do <b>NOT</b> confuse insurance and investment</li>
+            <li class="fragment">stay <b>AWAY</b> from ULIPs at all cost</li>
+          </ul>
+          <h5 class="fragment">policybazaar.com (i am NOT associated)</h5>
+        </section>
+        <section>
+          <h3>insurance + investment</h3>
+          <ul class="fragment"> scenario 1
+            <li class="fragment">50L policy</li>
+            <li class="fragment">premium = 5k pm</li>
+            <li class="fragment">ROI = 6%</li>
+          </ul>
+          <ul class="fragment"> scenario 2
+            <li class="fragment">2Cr policy</li>
+            <li class="fragment">premium = 1k pm</li>
+            <li class="fragment">invest remaining 4k</li>
+            <li class="fragment">ROI = 10%</li>
+          </ul>
+          <h3 class="fragment">do your own homework</h3>
+          <h5 class="fragment">policybazaar.com (i am NOT associated)</h5>
+        </section>
+        <section>
+          <h3>emergency fund</h3>
+          <ul>
+            <li class="fragment">safety net</li>
+            <li class="fragment">prevent you from doing financial <del>mistakes</del> <ins>blunders</ins> due to stressful situations</li>
+            <li class="fragment">should be 3-6 months of <b>expenses</b></li>
+            <li class="fragment">this should be in liquid cash / FD in bank</li>
+            <li class="fragment">this is <b>NOT</b> an investment</li>
+            <li class="fragment">do <b>NOT</b> even think of investments until you have emergency fund in place</li>
+          </ul>
+          <aside class="notes" data-markdown>
+          - to avoid wrong decisions due to short term emergencies
+          - eg, cash from credit card, loan from private money lenders at high interest rates, loan from family/friends
+          - eg, accident, death, major illness, etc
+          - this is your "safety net"
+          </aside>
+        </section>
+        <section>
+          <h3><code><span style="color:green"><i>passive</i></span> income >> expenses</code></h3>
+          <aside class="notes" data-markdown>
+          - we finally come to the "passive" part of our most important equation
+          - we cannot achieve passive income without investment, so let's talk about that
+          </aside>
+        </section>
+        <section>
+          <h3>Assets v/s Liabilities</h3>
+          <p class="fragment">is house an asset?</p>
+          <p class="fragment">is car an asset?</p>
+          <h5 class="fragment">we want to invest in <span style="color:green">assets</span>, not <span style="color:red">liabilities</span></h5>
+        </section>
+        <section>
+          <h3>common assets</h3>
+          <ul>
+            <li class="fragment">Fixed/Recurring Bank Deposits</li>
+            <li class="fragment">Gold</li>
+            <li class="fragment">Gold Jewelry</li>
+            <li class="fragment">Mutual Funds</li>
+            <li class="fragment">Real Estate</li>
+            <li class="fragment">etc</li>
+          </ul>
+        </section>
+        <section>
+          <h3>investment</h3>
+          <ul>
+            <li class="fragment"><b>long term</b> game</li>
+            <li class="fragment">for <b>passive</b> income</li>
+            <li class="fragment">i.e. you should <span style="color:red">NOT</span> need to monitor it hourly/daily/weekly</li>
+          </ul>
+        </section>
+        <section>
+          <h3>stock trading</h3>
+          <ul>
+            <li class="fragment">stock trading is <b>NOT</b> investment</li>
+            <li class="fragment">VOLATILITY is not the correct answer</li>
+            <li class="fragment">neither long term, nor passive</li>
+            <li class="fragment">full time job</li>
+            <li class="fragment">do it only if you have <b>time</b>, <b>passion</b> and <b>skill</b></li>
+            <li class="fragment">you <b>CAN</b> become financially independent without stock trading</li>
+            <li class="fragment">i have!!!</li>
+          </ul>
+        </section>
+        <section>
+          <h3>stock trading ...</h3>
+          <ul>
+            <li>you can <span style="color:green">invest</span> in stocks</li>
+            <li>but <span style="color:red">trading != investment</span></li>
+          </ul>
+        </section>
+        <!-- ---------------------------------------- Wrapping Up ---------------------------------------- -->
+        <section>
+	  <h2>for students / fresh graduates</h2>
+          <h4>what to do if i am not earning yet?</h4>
+          <h4>or, i'm earning too little?</h4>
+	</section>
+        <section>
+          <h3>my story</h3>
+	  <h5 class="fragment" style="color:red">things that i could have done better</h5>
+	  <ul>
+	    <li class="fragment">started investing in 2024 May</li>
+	    <li class="fragment">had invested once in 2014 for ~6 months; withdrew very prematurely</li>
+	    <li class="fragment">traded very intermittently with mixed results</li>
+	  </ul>
+	  <h5 class="fragment" style="color:green">things that i did well</h5>
+	  <ul>
+	    <li class="fragment">invested in upskilling</li>
+	    <li class="fragment">invested in brands</li>
+	    <li class="fragment">but, most importantly</li>
+	    <ul>
+	      <li class="fragment">better than the me of yesterday</li>
+	    </ul>
+	  </ul>
+	  <aside class="notes" data-markdown>
+          - let's look at my life story to see if you can get some ideas
+          - upskilling
+            - always had a passion for stock market: studied about trading, investing in stock market
+            - BE -> FE (full-stack)
+          - brands
+            - IIT -> Yahoo! -> Samsung -> Flipkart -> Amazon => huge growth
+          </aside>
+        </section>
+        <section>
+          <h3>invest in education</h3>
+          <ul>
+            <li class="fragment"><b>academics != education</b></li>
+            <li class="fragment">education is when you "apply" academics in real life</li>
+          </ul>
+        </section>
+        <section>
+          <h3>upskill</h3>
+          <ul>
+	    <li class="fragment">don't move too far away from core path</li>
+	    <li class="fragment">don't run behind shiny objects (stock trading, digital marketing, chatGPT, etc)</li>
+	    <li class="fragment">don't try standing on 2 horses at the same time</li>
+	  </ul>
+	  <aside class="notes" data-markdown>
+          - eg, i did BE -> FE => full-stack
+          - get-rich-quickly schemes make others rich, not you
+          </aside>
+        </section>
+        <section>
+          <h3>upskill ...</h3>
+          <ul>
+	    <li class="fragment">for higher education</li>
+	    <ul class="fragment">
+	      <li>brand matters</li>
+	    </ul>
+	    <li class="fragment">for job takers</li>
+	    <ul class="fragment">
+	      <li>start as high as possible</li>
+	    </ul>
+	    <li class="fragment">for self employed</li>
+	    <ul class="fragment">
+	      <li>build connections</li>
+	    </ul>
+	  </ul>
+        </section>
+        <section>
+          <h3>inculcate good habits</h3>
+          <ul>
+            <li class="fragment">get a term plan</li>
+	    <ul class="fragment">
+	      <li>if your parents are not yet dependent on you, they will soon be</li>
+	    </ul>
+	    <li class="fragment">track + budget (for pocket money v/s expenses)</li>
+            <li class="fragment">save + invest (very) small amounts</li>
+            <li class="fragment">study about investments; do <b>NOT</b> outsource FI</li>
+	    <ul class="fragment">
+	      <li>especially important for ladies</li>
+	    </ul>
+            <li class="fragment">take care of your body (quit smoking, reduce drinking, start exercising)</li>
+          </ul>
+        </section>
+        <section>
+          <h3>marriage</h3>
+          <ul>
+            <li class="fragment">find a partner who is working/will work</li>
+	    <ul class="fragment">
+	      <li>you could spend 1 salary and save the other completely</li>
+	    </ul>
+	    <li class="fragment">finances is the biggest and most common reason for marital fights</li>
+            <li class="fragment">discuss lifestyle choices</li>
+	    <ul class="fragment">
+	      <li>how much to save v/s spend</li>
+	      <li>for self and kids</li>
+	    </ul>
+            <li class="fragment">discuss investment knowledge and ideas</li>
+          </ul>
+        </section>
+        <section>
+          <h3>most important habit</h3>
+          <ul>
+	    <li class="fragment">learn to live below your means</li>
+	    <li class="fragment">lesser expenses -> lower FI number -> you become "wealthy" sooner!</li>
+	    <li class="fragment">it's very very very hard to inculcate this habit later in life. this is the right age to start it!</li>
+	  </ul>
+        </section>
+        <section>
+          <img src="img/enough-2138320270" width="80%" alt="enough">
+          <aside class="notes" data-markdown>
+          - story of enough
+          </aside>
+        </section>
+        <section>
+          <h3>FI number --Ankur Warikoo</h3>
+          <p><img src="img/WhatsApp Image 2025-02-07 at 18.05.36.jpeg" width="60%" alt="ankur warikoo 2nd life"></p>
+          <aside class="notes" data-markdown>
+          - this is why i had said "how to become financially independent and not become crorepati" at the beginning of the session
+          - this number will change over lifetime; especially after big life-events like marriage, child-birth, etc
+          </aside>
+        </section>
+        <section>
+          <h3>FI number = annual expense * 25</h3>
+          <h5 class="fragment">aka Rule of 25</h5>
+          <ul>
+	    <li class="fragment">don't worry that it will change. it will help you plan</li>
+	    <li class="fragment">control your expenses</li>
+	    <li class="fragment">otherwise you will NOT reach FI</li>
+	    <li class="fragment">expense tracking + budgeting</li>
+	  </ul>
+        </section>
+        <section>
+	  <h5 style="color:red">the bad news</h5>
+	  <h3 class="fragment">1Cr is not enough</h3>
+	  <div class="fragment">
+	    <table>
+	      <tr>
+		<th>monthly expense</th>
+		<th>FI number</th>
+	      </tr>
+	      <tr>
+		<th>50,000</th>
+		<th>1,50,00,000</th>
+	      </tr>
+	      <tr>
+		<th>1,00,000</th>
+		<th>3,00,00,000</th>
+	      </tr>
+	      <tr>
+		<th>2,00,000</th>
+		<th>6,00,00,000</th>
+	      </tr>
+	    </table>
+	  </div>
+	  <p class="fragment">FI number = annual expense * 25</p>
+          <aside class="notes" data-markdown>
+          - Babli-4
+            - 20k savings per month, increasing at 10% per year
+          - called the "rule of 25"
+          </aside>
+        </section>
+        <section>
+	  <h3 style="color:green">the good news</h3>
+	  <table>
+	    <tr>
+	      <th>monthly expense</th>
+	      <th>FI number</th>
+	      <th>time to FI for Babli-4</th>
+	    </tr>
+	    <tr>
+	      <th>50,000</th>
+	      <th>1,50,00,000</th>
+	      <th>27 years</th>
+	    </tr>
+	    <tr>
+	      <th>1,00,000</th>
+	      <th>3,00,00,000</th>
+	      <th>32 years</th>
+	    </tr>
+	    <tr>
+	      <th>2,00,000</th>
+	      <th>6,00,00,000</th>
+	      <th>37 years</th>
+	    </tr>
+	  </table>
+          <ul class="fragment">
+	    <li>notice that your money is doubling every 5 years; so stay invested</li>
+	    <li class="fragment">it's not very difficult to become a Crorepati the honest way</li>
+	    <li class="fragment">having a good partner will help</li>
+	  </ul>
+        </section>
+        <!--
+          ---------------------------------------- Wrapping Up ----------------------------------------
+            - resources
+              - https://docs.google.com/spreadsheets/d/1GD0Q2bzTYlmwFBm6LzBVd_j3A602o0WW-qqjn1zn28I/edit?gid=837316532#gid=837316532
+          -->
+        <section><h2>wrapping up</h2></section>
+	<section>
+          <h3>Bunty v/s Babli after 40 years</h3>
+	  <img class="fragment" src="img/2025-06-01_19-46.png" width="60%">
+	  <small>
+	    <ul>
+	      <li class="fragment">Babli-4 reached 10+ Cr in 40 years while starting at only 5k per month</li>
+	      <li class="fragment"><span style="color:green">start early</span>: compounding needs time to grow</li>
+	      <li class="fragment"><span style="color:green">be disciplined</span>: start small, but increase savings+investment by 10% per year</li>
+	      <li class="fragment"><span style="color:green">be disciplined</span>: invest regularly (don't time the market)</li>
+	      <li class="fragment"><span style="color:green">stay invested</span>: don't exit until you reach FI</li>
+	    </ul>
+	  </small>
+        </section>
+        <section>
+	  <h3>tying it all together</h3>
+	  <ul>
+	    <li class="fragment">rule of 25 (define your enough number)</li>
+	    <li class="fragment">3 step path to FI</li>
+	    <ul>
+	      <li class="fragment">earn</li>
+	      <ul class="fragment">
+		<li>start as high as possible</li>
+	      </ul>
+	      <li class="fragment">save</li>
+	      <small>
+	      <ul>
+		<li class="fragment">save atleast 10-20% of monthly income; pay yourself first; automate</li>
+		<li class="fragment">live below your means (remember Chulbuli)</li>
+		<li class="fragment">don't improve lifestyle at same rate of increase in income</li>
+	      </ul>
+	      </small>
+	      <li class="fragment">invest in assets</li>
+	    </ul>
+	  </ul>
+          <aside class="notes" data-markdown>
+          - start high
+            - it allows you to have a higher FI number that is achievable
+            - this will give you a better life-style for yourself and your family
+          - Chulbuli: it's not how much you earn, it's how much you save+invest
+          - in 2024, i saved 70% of my income, despite 2 internatinoal trips
+          </aside>
+        </section>
+	<section>
+	  <h3>tying it all together ...</h3>
+	  <ul>
+	    <li class="fragment">have adequate safety nets</li>
+	    <ul class="fragment">
+	      <li>insurance</li>
+	      <li>emergency fund</li>
+	      <li>these will allow you to</li>
+	      <ul class="fragment">
+		<li>explore more risky investments</li>
+		<li>not withdraw your investments prematurely</li>
+	      </ul>
+	    </ul>
+	  </ul>
+        </section>
+	<section>
+	  <h3>you <span style="color:red">CANNOT</span> achieve FI without this</h3>
+        </section>
+	<section>
+	  <h3>lessons</h3>
+	  <ol>6 most important things to achieve FI are
+	    <li class="fragment"><b>passive income >> expenses</b></li>
+	    <li class="fragment"><b>enough number</b></li>
+	    <li class="fragment"><b>automate your savings</b></li>
+	    <li class="fragment">improve lifestyle at a <b>lesser rate than increase in income</b></li>
+	    <li class="fragment"><b>discipline</b></li>
+	    <li class="fragment">invest in <b>assets</b></li>
+	  </ol>
+	</section>
+	<section>
+	  <p>actually, there's 1 more thing that is more important</p>
+	  <h3 class="fragment">life is not an excel sheet; <span style="color:green">have fun!</span></h3>
+	</section>
+	<section>
+	  <h3>is money the root of all evil?</h3>
+	  <img class="fragment" src="img/2025-04-20_11-42.png" width="50%" alt="root of all evil">
+	</section>
+	<section>
+	  <h5>stop at <span style="color:green">abundance</span></h5>
+	  <h5>don't go into <span style="color:red">greed</h5>
+	  <h5 class="fragment">use your time and money to</h5>
+	  <h3 style="color:green" class="fragment">do good for society!!!</h3>
+	</section>
+	<section>
+	  <p><img src="img/the-world-has-enough-for-everyones-need-but-not-enough-for-everyones-greed-721650779.jpg" width="80%" alt="gandhi enough"></p>
+	  <p>for <b><span style="color:green">FREE</span></b> personalized guidance, contact me at <b style="font-size:80px">h2w2.life@gmail.com</b></p>
+	</section>
+      </div>
+    </div>
+    <script src="reveal.js/dist/reveal.js"></script>
+    <script src="reveal.js/plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script>
+      Reveal.initialize({
+          plugins: [RevealNotes, RevealMarkdown],
+          keyboard: true,
+      });
+      Reveal.configure({
+          /*
+            slider
+              - 66: black
+              - 34: next
+              - 33: prev
+              - 27: esc
+            keyboard
+              - 13: enter
+              - 27: esc
+              - 32: space
+              - 39: right
+              - 37: left
+          */
+          keyboard: {
+              // 13: 'next', // go to the next slide when the ENTER key is pressed
+              // 27: function() {}, // do something custom when ESC is pressed
+              66: function vidplay() {
+                  var video = document.getElementById("video");
+                  if (video.paused == true)
+                      video.play();
+                      else video.pause();
+              }
+          }
+      });
+      /*
+      document.addEventListener('keydown', function(event) {
+          console.log('Key pressed:', event.keyCode);
+      });
+      */
+    </script>
+  </body>
+</html>
