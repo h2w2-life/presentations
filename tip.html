@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="reveal.js/dist/reveal.css" />
+    <link rel="stylesheet" href="reveal.js/dist/theme/white.css" />
+    <style type="text/css">
+      .reveal ul, .reveal ol { text-align: left;
+                               list-style-position: inside; }
+      .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5 {text-transform: none; }
+      .reveal .slides { background-image: url('img/logo_tree-book_light_opacity-05.png');
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-blend-mode: lighten;
+                        background-size: 80%; }
+      .container { display: flex; }
+      .col { flex: 1 }
+    </style>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section data-markdown>
+          <textarea data-template># Thinking in Python</textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            ## Day - 1
+            - what is programming?
+              - program
+              - programming language
+            - variables and values
+            - state change
+            ---
+            ### programming
+            - how do you brush your teeth? <!-- .element: class="fragment" -->
+            - how do you make maggi / tea? <!-- .element: class="fragment" -->
+            ---
+            ### programming languages
+            ---
+            #### Java
+            ```
+public class Main {
+    public static void main(String[] args) {
+
+        int a = 10;
+        int b = 20;
+        int c = 30;
+
+        float determinant = b * b - 4 * a * c;
+
+        System.out.println("Determinant = " + determinant);
+    }
+}
+            ```
+            ---
+            #### Clojure
+            ```
+(let [a 10
+      b 20
+      c 30
+      determinant (- (* b b) (* 4 a c))]
+   (println "Determinant = " determinant))
+            ```
+            ---
+            #### Python
+            ```
+a = 10
+b = 20
+c = 30
+determinant = b * b - 4 * a * c
+println("Determinant = " + determinant)
+            ```
+            ---
+            ### program
+            ---
+            #### step-by-step instructions
+            ```
+print("hello")
+print("world")
+            ```
+            ```
+print("a")
+print("b")
+print("c")
+            ```
+            ```
+print(1)
+print(2)
+            ```
+            ---
+            #### variables
+            ```
+x = 5
+print(x)
+            ```
+            ```
+a = 10
+print(a)
+            ```
+            ```
+name = "abhi"
+print(name)
+            ```
+            ```
+x = 5
+x = 7
+print(x)
+            ```
+            ---
+            #### state change
+            ```
+x = 5
+x = x + 2
+print(x)
+            ```
+            ```
+x = 10
+x = x - 3
+print(x)
+            ```
+            ```
+x = 4
+x = x * 2
+print(x)
+            ```
+            ```
+x = 8
+x = x / 2
+print(x)
+            ```
+            ---
+            ### home work
+            ---
+            #### predict
+            ```
+print("hi")
+print("bye")
+            ```
+            ```
+x = 5
+x = 7
+print(x)
+            ```
+            ```
+x = 3
+x = x + 4
+print(x)
+            ```
+            ```
+a = 10
+b = a
+print(b)
+            ```
+            ```
+x = 2
+x = x + x
+print(x)
+            ```
+            ```
+x = 5
+x = x * 3
+print(x)
+            ```
+            ---
+            #### write
+            - print your name 5 times
+            - store age and print
+            - store number, add 10, print
+            - store marks of 3 subjects, print total
+            - store a number, double it
+            - store a number, halve it (integer)
+            ---
+            #### re-write
+            - instead of 3 subjects, do 5
+            - instead of +10, try +20
+          </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            ## Day - 2
+          </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            ## Day - 3
+          </textarea>
+        </section>
+      </div>
+    </div>
+    <script src="reveal.js/dist/reveal.js"></script>
+    <script src="reveal.js/plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script>
+      Reveal.initialize({
+          plugins: [RevealNotes, RevealMarkdown],
+          keyboard: true,
+      });
+      Reveal.configure({
+          /*
+            slider
+              - 66: black
+              - 34: next
+              - 33: prev
+              - 27: esc
+            keyboard
+              - 13: enter
+              - 27: esc
+              - 32: space
+              - 39: right
+              - 37: left
+          */
+          keyboard: {
+              // 13: 'next', // go to the next slide when the ENTER key is pressed
+              // 27: function() {}, // do something custom when ESC is pressed
+              66: function vidplay() {
+                  var video = document.getElementById("video");
+                  if (video.paused == true)
+                      video.play();
+                      else video.pause();
+              }
+          }
+      });
+      /*
+      document.addEventListener('keydown', function(event) {
+          console.log('Key pressed:', event.keyCode);
+      });
+      */
+    </script>
+  </body>
+</html>
