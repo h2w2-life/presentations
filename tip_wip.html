@@ -4,14 +4,15 @@
     <link rel="stylesheet" href="reveal.js/dist/reveal.css" />
     <link rel="stylesheet" href="reveal.js/dist/theme/white.css" />
     <style type="text/css">
-      .reveal ul, .reveal ol { text-align: left;
-                               list-style-position: inside; }
-      .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5 {text-transform: none; }
+      .reveal ul, .reveal ol { list-style-position: inside; }
+      .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5 { text-transform: none;
+                                                                   text-align: center }
       .reveal .slides { background-image: url('img/logo_tree-book_light_opacity-05.png');
                         background-repeat: no-repeat;
                         background-position: center;
                         background-blend-mode: lighten;
-                        background-size: 80%; }
+                        background-size: 80%;
+                        text-align: left; }
       .container { display: flex; }
       .col { flex: 1 }
     </style>
@@ -76,7 +77,7 @@ a = 10
 b = 20
 c = 30
 determinant = b * b - 4 * a * c
-println("Determinant = " + determinant)
+print("Determinant = " + determinant)
             ```
             ---
             ### program
@@ -97,7 +98,7 @@ print(2)
             ```
             ---
             #### repl
-            - https://www.online-python.com
+            - https://www.programiz.com/python-programming/online-compiler/
             ---
             #### indentation
             ```
@@ -203,9 +204,10 @@ print(x)
             - store a number, double it
             - store a number, halve it (integer)
             ---
-            #### re-write
+            #### challenge
             - instead of 3 subjects, do 5
             - instead of +10, try +20
+            - rewrite all programs without seeing
           </textarea>
         </section>
         <section data-markdown>
@@ -213,6 +215,7 @@ print(x)
             ## Day - 2
             - expressions
             - input and output
+            - data types
             - type conversion
             - operators
             ---
@@ -252,6 +255,12 @@ print(x)
             ```
 print(input())
             ```
+            ---
+            ### data types
+            - integers (1, -1, 0, 10000, etc)
+            - floats (1.1, -2.2, 0.000001, 10000.9999, etc)
+            - characters ('a', '5', etc)
+            - strings ("abc", "123", "a1b2c3", etc)
             ---
             ### type conversion
             ```
@@ -340,24 +349,6 @@ print('a >= b =', a >= b)
 print('a <= b =', a <= b)
             ```
             ---
-            #### logical (and, or)
-            ```
-a = 5
-b = 6
-
-print((a > 2) and (b >= 6))    # True
-
-# logical AND
-print(True and True)     # True
-print(True and False)    # False
-
-# logical OR
-print(True or False)     # True
-
-# logical NOT
-print(not True)          # False
-            ```
-            ---
             #### assignment (=, +=, -+, *=, /=, %=, **=)
             ```
 # assign 10 to a
@@ -413,14 +404,294 @@ print(3 * 3 + 1)
             - input number → square
             - input number → double + 5
             ---
-            #### re-write
+            #### challenge
             - extend sum to 3 numbers
             - extend product to 3 numbers
+            - rewrite all programs without seeing
           </textarea>
         </section>
         <section data-markdown>
           <textarea data-template>
             ## Day - 3
+            - more data types
+              - boolean (True, False)
+              - nothing (None)
+            - more operators
+              - logical
+            - errors (syntactic and logical)
+            ---
+            ### more data types
+            - boolean (True, False)
+            - nothing (None)
+            ---
+            ### more operators
+            logical (and, or)
+            ```
+# logical AND
+# (True only if all operands are True, else False)
+print(True and True)
+print(True and False)
+
+# logical OR
+# (False only if all operands are False, else True)
+print(True or False)
+
+# logical NOT
+# (True -> False, and False -> True)
+print(not True)
+            ```
+            ---
+            ### more operators ...
+            ```
+a = 5
+b = 6
+
+print((a > 2) and (b >= 6))
+            ```
+            ---
+            ### syntactic errors
+            - not following rules of programming language correctly
+            - indentation (most common)
+            ```
+print("a")
+  print("b")
+print("c")
+            ```
+            - missing or extra brackets
+            ```
+print("a")
+print("b"))
+print("c")
+            ```
+            - misspelling Python keywords
+            ```
+a = true
+b = none
+            ```
+            ---
+            ### logical errors
+            - caused due to mistake in logic
+            - name error (using a variable that hasn't been defined yet)
+            ```
+a = b
+            ```
+            - value error (wrong input) / type error (wrong parameter)
+            ```
+a = int("forty")
+print("forty" / 4)
+            ```
+            - arithmetic error
+            ```
+a = 20 / 0
+            ```
+            ---
+            ### homework
+            #### predict
+            ```
+print(5 > 3)
+            ```
+            ```
+print(2 = 2)
+            ```
+            ```
+print(2 == 2)
+            ```
+            ```
+print(4 < 1)
+            ```
+            ```
+a = 5
+b = 7
+print(a > b)
+            ```
+            ---
+            #### write
+            - revision of day-2
+              - input hours → seconds
+              - input rectangle area and perimeter
+              - input number → square + cube
+              - input 5 subjects → average
+            - day-3
+              - input 2 numbers → print a > b
+              - input 2 numbers → print a < b
+              - input 2 numbers → print equal
+              - input age → check > 18
+              - input marks → check > 40
+              - input number → check == 0
+          </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            ## Day - 4
+            - this is the most important day of the course
+              - if you find this difficult, then you will not understand the rest of the course
+              - so ask practice, practice, practice; and ask questions
+            - concepts
+              - if (decision making)
+              - if-else (two paths)
+              - indentation (structure = meaning)
+              - real world like problems
+            ---
+            ### single if
+            ```
+x = 10
+if x > 5:
+    print("big")
+            ```
+            ```
+x = 3
+if x > 5:
+    print("big")
+            ```
+            ```
+x = int(input())
+if x > 10:
+    print("greater than 10")
+            ```
+            ```
+x = 5
+if x > 10:
+    print("hi")
+print("done")
+            ```
+            ---
+            ### multiple ifs
+            ```
+x = 10
+if x > 5:
+    print("A")
+if x > 8:
+    print("B")
+            ```
+            ```
+x = 10
+if x > 5:
+    print("A")
+if x > 8:
+    print("B")
+print("done")
+            ```
+            ---
+            ### if-else
+            ```
+x = 10
+if x > 5:
+    print("big")
+else:
+    print("small")
+            ```
+            ```
+x = 3
+if x > 5:
+    print("big")
+else:
+    print("small")
+            ```
+            ```
+x = int(input())
+if x % 2 == 0:
+    print("even")
+else:
+    print("odd")
+            ```
+            ```
+a = int(input())
+b = int(input())
+
+if a > b:
+    print("a bigger")
+else:
+    print("b bigger or equal")
+            ```
+            ---
+            ### indentation
+            ```
+x = 10
+if x > 5:
+print("hi")
+            ```
+            ```
+if x > 5:
+    print("A")
+    print("B")
+print("C")
+            ```
+            ---
+            ### common mistakes
+            - thinking if always runs
+            ```
+x = 10
+if x > 5:
+    print("A")
+print("B")
+            ```
+            - confusing = vs ==
+            ```
+x = 10
+if x = 5:
+    print("A")
+print("B")
+            ```
+            ---
+            ### common mistakes ...
+            - missing indentation
+            ```
+x = 10
+if x > 5:
+print("hi")
+            ```
+            - assuming only one if runs
+            ```
+x = 8
+if x > 5:
+    print("A")
+if x > 10:
+    print("B")
+            ```
+            ---
+            ### homework
+            #### predict
+            ```
+x = 10
+if x > 5:
+    print("A")
+print("B")
+            ```
+            ```
+x = 2
+if x > 5:
+    print("A")
+else:
+    print("B")
+            ```
+            ```
+x = 8
+if x > 5:
+    print("A")
+if x > 10:
+    print("B")
+            ```
+            ```
+x = 5
+if x == 5:
+    print("yes")
+else:
+    print("no")
+            ```
+            ---
+            #### write
+            - input number → print “positive” if > 0
+            - input number → print “positive” if > 0, else print “negative”
+            - input number → check even/odd
+            - input 2 numbers → print bigger number
+            - input number → check >10
+            - modify even/odd → also print “zero” separately
+            ---
+            #### challenge
+            - input marks 5 subjects → pass/fail (average >= 35)
+            - take 3 numbers → print largest
+            - take number → check if divisible by 3
+            - rewrite all programs without seeing
           </textarea>
         </section>
       </div>
