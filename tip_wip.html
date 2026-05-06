@@ -282,7 +282,7 @@ print(x)
             - instead of +10, try +20
             ```
             x = 10
-            x = x + 10
+            x = x + 20
             print(x)
             ```
             ---
@@ -478,6 +478,9 @@ print(3 * 3 + 1)
           </textarea>
         </section>
         <section data-markdown>
+          <textarea data-template># Thinking in Python</textarea>
+        </section>
+        <section data-markdown>
           <textarea data-template>
             ## Day - 3
             - more data types
@@ -486,6 +489,67 @@ print(3 * 3 + 1)
             - more operators
               - logical
             - errors (syntactic and logical)
+            ---
+            ### Day - 2: input
+            ```
+            x = input()
+
+            x = input()
+            y = input()
+            ```
+            ---
+            ```
+            num1 = input("enter 1st number:")
+            num2 = input("enter 2nd number:")
+            ```
+            ---
+            ### Day - 2: homework
+            #### write
+            - input name → greeting
+            ```
+            name = input("enter name: ")
+            print("hello ", name)
+            ```
+            - input 2 numbers → sum
+            ```
+            num1 = int(input("enter 1st number: "))
+            num2 = int(input("enter 2nd number: "))
+            sum = num1 + num2
+            print("sum of the 2 numbers is: ", sum)
+            ```
+            - input 2 numbers → product
+            ```
+            num1 = int(input("enter 1st number: "))
+            num2 = int(input("enter 2nd number: "))
+            prod = num1 * num2
+            print("product of the 2 numbers is: ", prod)
+            ```
+            ---
+            - input age → age after 5 years
+            ```
+            age = int(input("enter current age: "))
+            after5years = age + 5
+            print("age after 5 years will be: ", after5years)
+            ```
+            - input 2 numbers → difference
+            ```
+            num1 = int(input("enter 1st number: "))
+            num2 = int(input("enter 2nd number: "))
+            diff = num1 - num2
+            print("difference of the 2 numbers is: ", diff)
+            ```
+            - input number → square
+            ```
+            num = int(input("enter number: "))
+            sq = num ** 2
+            print("square of the number is: ", sq)
+            ```
+            - input number → double + 5
+            ```
+            num = int(input("enter number: "))
+            ans = num * 2 + 5
+            print("double + 5 of the number is: ", ans)
+            ```
             ---
             ### more data types
             - boolean (True, False)
@@ -514,6 +578,10 @@ a = 5
 b = 6
 
 print((a > 2) and (b >= 6))
+
+print((a > 2) or (b >= 6))
+
+print(not (a > 2))
             ```
             ---
             ### syntactic errors

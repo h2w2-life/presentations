@@ -207,7 +207,11 @@ print(x)
             #### challenge
             - instead of 3 subjects, do 5
             - instead of +10, try +20
+            - rewrite all programs without seeing
           </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template># Thinking in Python</textarea>
         </section>
         <section data-markdown>
           <textarea data-template>
@@ -278,7 +282,7 @@ print(x)
             - instead of +10, try +20
             ```
             x = 10
-            x = x + 10
+            x = x + 20
             print(x)
             ```
             ---
@@ -473,7 +477,185 @@ print(3 * 3 + 1)
             - rewrite all programs without seeing
           </textarea>
         </section>
-      </div>
+        <section data-markdown>
+          <textarea data-template># Thinking in Python</textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            ## Day - 3
+            - more data types
+              - boolean (True, False)
+              - nothing (None)
+            - more operators
+              - logical
+            - errors (syntactic and logical)
+            ---
+            ### Day - 2: input
+            ```
+            x = input()
+
+            x = input()
+            y = input()
+            ```
+            ---
+            ```
+            num1 = input("enter 1st number:")
+            num2 = input("enter 2nd number:")
+            ```
+            ---
+            ### Day - 2: homework
+            #### write
+            - input name → greeting
+            ```
+            name = input("enter name: ")
+            print("hello ", name)
+            ```
+            - input 2 numbers → sum
+            ```
+            num1 = int(input("enter 1st number: "))
+            num2 = int(input("enter 2nd number: "))
+            sum = num1 + num2
+            print("sum of the 2 numbers is: ", sum)
+            ```
+            - input 2 numbers → product
+            ```
+            num1 = int(input("enter 1st number: "))
+            num2 = int(input("enter 2nd number: "))
+            prod = num1 * num2
+            print("product of the 2 numbers is: ", prod)
+            ```
+            ---
+            - input age → age after 5 years
+            ```
+            age = int(input("enter current age: "))
+            after5years = age + 5
+            print("age after 5 years will be: ", after5years)
+            ```
+            - input 2 numbers → difference
+            ```
+            num1 = int(input("enter 1st number: "))
+            num2 = int(input("enter 2nd number: "))
+            diff = num1 - num2
+            print("difference of the 2 numbers is: ", diff)
+            ```
+            - input number → square
+            ```
+            num = int(input("enter number: "))
+            sq = num ** 2
+            print("square of the number is: ", sq)
+            ```
+            - input number → double + 5
+            ```
+            num = int(input("enter number: "))
+            ans = num * 2 + 5
+            print("double + 5 of the number is: ", ans)
+            ```
+            ---
+            ### more data types
+            - boolean (True, False)
+            - nothing (None)
+            ---
+            ### more operators
+            logical (and, or)
+            ```
+# logical AND
+# (True only if all operands are True, else False)
+print(True and True)
+print(True and False)
+
+# logical OR
+# (False only if all operands are False, else True)
+print(True or False)
+
+# logical NOT
+# (True -> False, and False -> True)
+print(not True)
+            ```
+            ---
+            ### more operators ...
+            ```
+a = 5
+b = 6
+
+print((a > 2) and (b >= 6))
+
+print((a > 2) or (b >= 6))
+
+print(not (a > 2))
+            ```
+            ---
+            ### syntactic errors
+            - not following rules of programming language correctly
+            - indentation (most common)
+            ```
+print("a")
+  print("b")
+print("c")
+            ```
+            - missing or extra brackets
+            ```
+print("a")
+print("b"))
+print("c")
+            ```
+            - misspelling Python keywords
+            ```
+a = true
+b = none
+            ```
+            ---
+            ### logical errors
+            - caused due to mistake in logic
+            - name error (using a variable that hasn't been defined yet)
+            ```
+a = b
+            ```
+            - value error (wrong input) / type error (wrong parameter)
+            ```
+a = int("forty")
+print("forty" / 4)
+            ```
+            - arithmetic error
+            ```
+a = 20 / 0
+            ```
+            ---
+            ### homework
+            #### predict
+            ```
+print(5 > 3)
+            ```
+            ```
+print(2 = 2)
+            ```
+            ```
+print(2 == 2)
+            ```
+            ```
+print(4 < 1)
+            ```
+            ```
+a = 5
+b = 7
+print(a > b)
+            ```
+            ---
+            #### write
+            - revision of day-2
+              - input hours → seconds
+              - input rectangle area and perimeter
+              - input number → square + cube
+              - input 5 subjects → average
+            - day-3
+              - input 2 numbers → print a > b
+              - input 2 numbers → print a < b
+              - input 2 numbers → print equal
+              - input age → check > 18
+              - input marks → check > 40
+              - input number → check == 0
+          </textarea>
+        </section>
+    </div>
     </div>
     <script src="reveal.js/dist/reveal.js"></script>
     <script src="reveal.js/plugin/notes/notes.js"></script>
