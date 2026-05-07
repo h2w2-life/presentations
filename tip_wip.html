@@ -656,6 +656,9 @@ print(a > b)
           </textarea>
         </section>
         <section data-markdown>
+          <textarea data-template># Thinking in Python</textarea>
+        </section>
+        <section data-markdown>
           <textarea data-template>
             ## Day - 4
             - this is the most important day of the course
@@ -665,7 +668,76 @@ print(a > b)
               - if (decision making)
               - if-else (two paths)
               - indentation (structure = meaning)
-              - real world like problems
+            ---
+            ### Day - 3: homework
+            #### day-2
+            - input hours → seconds
+            ```
+            hours = int(input("enter number of hours: "))
+            seconds = hours * 60 * 60
+            print("number of seconds is: ", seconds)
+            ```
+            - input rectangle area and perimeter
+            ```
+            length = int(input("enter length of rectangle: "))
+            breadth = int(input("enter breadth of rectangle: "))
+            area = length * breadth
+            perimeter = 2 * (length + breadth)
+            print("area = ", area, ", perimeter = ", perimeter)
+            ```
+            ---
+            - input number → square + cube
+            ```
+            number = int(input("enter number: "))
+            square_cube = number ** 2 + number ** 3
+            print("square + cube of number is: ", square_cube)
+            ```
+            - input 5 subjects → average
+            ```
+            num1 = int(input("enter 1st number: "))
+            num2 = int(input("enter 2nd number: "))
+            num3 = int(input("enter 3rd number: "))
+            num4 = int(input("enter 4th number: "))
+            num5 = int(input("enter 5th number: "))
+            sum = num1 + num2 + num3 + num4 + num5
+            print("sum of 5 numbers is: ", sum)
+            ```
+            ---
+            #### day-3
+            - input 2 numbers → print a > b
+            ```
+            num1 = int(input("enter 1st number: "))
+            num2 = int(input("enter 2nd number: "))
+            print("num1 > num2: ", num1 > num2)
+            ```
+            - input 2 numbers → print a < b
+            ```
+            num1 = int(input("enter 1st number: "))
+            num2 = int(input("enter 2nd number: "))
+            print("num1 < num2: ", num1 < num2)
+            ```
+            ---
+            - input 2 numbers → print equal
+            ```
+            num1 = int(input("enter 1st number: "))
+            num2 = int(input("enter 2nd number: "))
+            print("num1 == num2: ", num1 == num2)
+            ```
+            - input age → check > 18
+            ```
+            age = int(input("enter age: "))
+            print("age > 18: ", age > 18)
+            ```
+            - input marks → check > 40
+            ```
+            marks = int(input("enter marks: "))
+            print("marks > 40: ", marks > 40)
+            ```
+            - input number → check == 0
+            ```
+            num = int(input("enter number: "))
+            print("num == 0: ", num1 == 0)
+            ```
             ---
             ### single if
             ```
