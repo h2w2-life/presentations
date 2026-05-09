@@ -20,7 +20,29 @@
   <body>
     <div class="reveal">
       <div class="slides">
+        <!-- =============== week - 1 =============== -->
+        <!-- ======================================== -->
         <section data-markdown>
+          <textarea data-template># Thinking in Python</textarea>
+        </section>
+        <section>
+          <h2>Table of Contents</h2>
+          <h3>Week - 1</h3>
+          <ul>
+          <li><a href="#day1">Day - 1</a></li>
+          <li><a href="#day2">Day - 2</a></li>
+          <li><a href="#day3">Day - 3</a></li>
+          <li><a href="#day4">Day - 4</a></li>
+          </ul>
+          <h3>Week - 2</h3>
+          <ul>
+          <li><a href="#day5">Day - 5</a></li>
+          <li><a href="#day6">Day - 6</a></li>
+          <li><a href="#day7">Day - 7</a></li>
+          <li><a href="#day8">Day - 8</a></li>
+          </ul>
+        </section>
+        <section id="day1" data-markdown>
           <textarea data-template># Thinking in Python</textarea>
         </section>
         <section data-markdown>
@@ -210,7 +232,8 @@ print(x)
             - rewrite all programs without seeing
           </textarea>
         </section>
-        <section data-markdown>
+        <!-- ======================================== -->
+        <section id="day2" data-markdown>
           <textarea data-template># Thinking in Python</textarea>
         </section>
         <section data-markdown>
@@ -477,7 +500,8 @@ print(3 * 3 + 1)
             - rewrite all programs without seeing
           </textarea>
         </section>
-        <section data-markdown>
+        <!-- ======================================== -->
+        <section id="day3" data-markdown>
           <textarea data-template># Thinking in Python</textarea>
         </section>
         <section data-markdown>
@@ -655,7 +679,8 @@ print(a > b)
               - input number → check == 0
           </textarea>
         </section>
-        <section data-markdown>
+        <!-- ======================================== -->
+        <section id="day4" data-markdown>
           <textarea data-template># Thinking in Python</textarea>
         </section>
         <section data-markdown>
@@ -899,6 +924,732 @@ else:
             - take 3 numbers → print largest
             - take number → check if divisible by 3
             - rewrite all programs without seeing
+          </textarea>
+        </section>
+        <!-- =============== week - 2 =============== -->
+        <!-- ======================================== -->
+        <section id="day5" data-markdown>
+          <textarea data-template># Thinking in Python</textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            ## Day - 5
+            - concepts
+              1. why multiple ifs are not enough
+              2. if - elif - else
+              3. order matters
+              4. full structure (if-elif-else)
+              5. boundary awareness
+            ---
+            ### Day - 4: homework
+            #### write
+            - input number → print “positive” if > 0
+            ```
+            num = int(input("enter a number: "))
+            if num > 0:
+                print("entered number is positive")
+            ```
+            - input number → print “positive” if > 0, else print “negative”
+            ```
+            num = int(input("enter a number: "))
+            if num > 0:
+                print("entered number is positive")
+            else:
+                print("entered number is negative")
+            ```
+            ---
+            - input number → check even/odd
+            ```
+            num = int(input("enter a number: "))
+            if num % 2 == 0:
+                print("entered number is even")
+            else:
+                print("entered number is odd")
+            ```
+            - input 2 numbers → print bigger number
+            ```
+            num1 = int(input("enter 1st number: "))
+            num2 = int(input("enter 2nd number: "))
+            if num1 > num2:
+                print("first number is bigger")
+            else:
+                print("second number is bigger or equal")
+            ```
+            - input number → check >10
+            ```
+            num = int(input("enter a number: "))
+            if num > 10:
+                print("entered number is greater than 10")
+            ```
+            ---
+            - modify even/odd → also print “zero” separately
+            ```
+            num = int(input("enter a number: "))
+            if num % 2 == 0:
+                print("entered number is even")
+            else:
+                print("entered number is odd")
+            if num == 0:
+                print("entered number is zero")
+            ```
+            ---
+            #### challenge
+            - input marks 5 subjects → pass/fail (average >= 35)
+            ```
+            num1 = int(input("enter marks of 1st subject: "))
+            num2 = int(input("enter marks of 2nd subject: "))
+            num3 = int(input("enter marks of 3rd subject: "))
+            num4 = int(input("enter marks of 4th subject: "))
+            num5 = int(input("enter marks of 5th subject: "))
+            average = (num1 + num2 + num3 + num4 + num5) / 5
+            if average >= 35:
+                print("congratulations! you have passed")
+            else:
+                print("sorry, you have failed")
+            ```
+            - take number → check if divisible by 3
+            ```
+            num = int(input("enter a number: "))
+            if num % 3 == 0:
+                print("entered number is divisible by 3")
+            else:
+                print("entered number is not divisible by 3")
+            ```
+            ---
+            - take 3 numbers → print largest
+            ```
+            num1 = int(input("enter 1st number: "))
+            num2 = int(input("enter 2nd number: "))
+            num3 = int(input("enter 3rd number: "))
+            if num1 > num2 and num1 > num3:
+                print("number 1 is largest")
+            if num2 > num1 and num2 > num3:
+                print("number 2 is largest")
+            if num3 > num1 and num3 > num2:
+                print("number 3 is largest")
+            ```
+            ---
+            ### concept - 1
+            - why multiple `if`s are not enough
+            ```
+x = 10
+if x > 5:
+    print("A")
+if x > 8:
+    print("B")
+            ```
+            - but what if we need just 1 output? <!-- .element: class="fragment" -->
+            ---
+            - real world problem
+            ```
+marks = 80
+if marks >= 75:
+    print("distinction")
+if marks >= 50:
+    print("pass")
+            ```
+            - ie, both conditions run <!-- .element: class="fragment" -->
+            ---
+            ### concept - 2
+            - `elif` (ie, `else if`)
+            ```
+marks = 80
+if marks >= 75:
+    print("distinction")
+elif marks >= 50:
+    print("pass")
+            ```
+            - rule: only ONE block runs. after first true condition, rest are skipped <!-- .element: class="fragment" -->
+            - marks = 60 <!-- .element: class="fragment" -->
+            ---
+            ### concept - 3
+            - order matters
+            ```
+marks = 80
+if marks >= 50:
+    print("pass")
+elif marks >= 75:
+    print("distinction")
+            ```
+            ```
+marks = 80
+if marks >= 75:
+    print("pass")
+elif marks >= 50:
+    print("distinction")
+            ```
+            ---
+            ### concept - 4
+            - full structure (if - elif - else)
+            ```
+input: marks
+task:
+    >= 75 → distinction
+    >= 50 → pass
+    else → fail
+            ```
+            ```
+marks = int(input())
+
+if marks >= 75:
+    print("distinction")
+elif marks >= 50:
+    print("pass")
+else:
+    print("fail")
+            ```
+            ---
+            - full structure (if - elif - else)...
+            ```
+input: age
+task:
+    < 13 → child
+    < 18 → teen
+    else → adult
+            ```
+            ```
+age = int(input())
+
+if age < 13:
+    print("child")
+elif age < 18:
+    print("teen")
+else:
+    print("adult")
+            ```
+            ---
+            ### concept - 5
+            - boundary awareness
+            ```
+marks = 50
+
+if marks >= 75:
+    print("distinction")
+elif marks >= 50:
+    print("pass")
+else:
+    print("fail")
+            ```
+            - where does 50 go? <!-- .element: class="fragment" -->
+            ---
+            ### homework
+            #### predict
+            ```
+marks = 80
+
+if marks >= 75:
+    print("A")
+elif marks >= 50:
+    print("B")
+            ```
+            ```
+marks = 40
+
+if marks >= 75:
+    print("A")
+elif marks >= 50:
+    print("B")
+else:
+    print("C")
+            ```
+            ```
+x = 10
+
+if x > 5:
+    print("A")
+if x > 8:
+    print("B")
+            ```
+            ---
+            ```
+x = 10
+
+if x > 5:
+    print("A")
+elif x > 8:
+    print("B")
+            ```
+            ```
+marks = 80
+
+if marks >= 50:
+    print("pass")
+elif marks >= 75:
+    print("distinction")
+            ```
+            ---
+            #### write
+            ```
+input: marks
+task:
+    >= 90 → A
+    >= 75 → B
+    >= 50 → C
+    else → fail
+            ```
+            ```
+input: number
+task:
+    > 0 → positive
+    == 0 → zero
+    else → negative
+            ```
+            ```
+input: temperature
+task:
+    > 30 → hot
+    > 20 → warm
+    else → cold
+            ```
+            ---
+            ```
+input: age
+task:
+    < 5 → toddler
+    < 13 → child
+    < 18 → teen
+    else → adult
+            ```
+            ```
+input: age
+task:
+    > 18 → adult
+    > 13 → teen
+    > 5 → child
+    else → toddler
+            ```
+            ```
+input: marks
+task:
+    >= 40 → pass
+    else → fail
+            ```
+            ---
+            #### challenge
+            - to the "A, B, C, fail" problem, add one more category (e.g., >=95 → topper)
+            - will the below program work correctly? why?
+            ```
+input: age
+task:
+    > 18 → adult
+    > 5 → child
+    > 13 → teen
+    else → toddler
+            ```
+            ---
+            ```
+input: marks
+task:
+    < 0 OR > 100 → invalid
+    >= 90 → A
+    >= 75 → B
+    >= 50 → C
+    else → fail
+            ```
+            ```
+input: number
+task:
+    divisible by 3 → three
+    divisible by 5 → five
+    else → none
+            ```
+          </textarea>
+        </section>
+        <!-- ======================================== -->
+        <section id="day6" data-markdown>
+          <textarea data-template># Thinking in Python</textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            ## Day - 6
+            - this is a big thinking upgrade
+              - till now => one condition → one decision
+              - from now => multiple conditions together → one decision
+            - concepts
+              1. and → both conditions must be true
+              2. or → at least one true
+              3. mixing with if-elif
+            ---
+            ### Day - 5: homework
+            #### write
+            ```
+input: marks
+task:
+    >= 90 → A
+    >= 75 → B
+    >= 50 → C
+    else → fail
+            ```
+            ```
+            marks = int(input("enter marks: "))
+            if marks >= 90:
+                print("you have got A class")
+            elif marks >= 75:
+                print("you have got B class")
+            elif marks >= 50:
+                print("you have got C class")
+            else:
+                print("you have failed")
+            ```
+            ---
+            ```
+input: number
+task:
+    > 0 → positive
+    == 0 → zero
+    else → negative
+            ```
+            ```
+            number = int(input("enter number: "))
+            if number > 0:
+                print("number entered is positive")
+            elif number == 0:
+                print("number entered is zero")
+            else:
+                print("number entered is negative")
+            ```
+            ---
+            ```
+input: temperature
+task:
+    > 30 → hot
+    > 20 → warm
+    else → cold
+            ```
+            ```
+            temp = int(input("enter temperature: "))
+            if temp > 30:
+                print("it's hot")
+            elif temp > 20:
+                print("it's warm")
+            else:
+                print("it's cold")
+            ```
+            ---
+            ```
+input: age
+task:
+    < 5 → toddler
+    < 13 → child
+    < 18 → teen
+    else → adult
+            ```
+            ```
+            age = int(input("enter age: "))
+            if age < 5:
+                print("you are a toddler")
+            elif age < 13:
+                print("you are a child")
+            elif age < 18:
+                print("you are a teen")
+            else:
+                print("you are an adult")
+            ```
+            ---
+            ```
+input: age
+task:
+    > 18 → adult
+    > 13 → teen
+    > 5 → child
+    else → toddler
+            ```
+            ```
+            age = int(input("enter age: "))
+            if age > 18:
+                print("you are an adult")
+            elif age > 13:
+                print("you are a teen")
+            elif age > 5:
+                print("you are a child")
+            else:
+                print("you are a toddler")
+            ```
+            ---
+            ```
+input: marks
+task:
+    >= 40 → pass
+    else → fail
+            ```
+            ```
+            marks = int(input("enter marks: "))
+            if marks >= 40:
+                print("you have passed")
+            else:
+                print("you have failed")
+            ```
+            ---
+            #### challenge
+            - to the "A, B, C, fail" problem, add one more category (e.g., >=95 → topper)
+            ```
+            marks = int(input("enter marks: "))
+            if marks >= 95:
+                print("you are a topper")
+            if marks >= 90:
+                print("you have got A class")
+            elif marks >= 75:
+                print("you have got B class")
+            elif marks >= 50:
+                print("you have got C class")
+            else:
+                print("you have failed")
+            ```
+            ---
+            ```
+input: marks
+task:
+    < 0 OR > 100 → invalid
+    >= 90 → A
+    >= 75 → B
+    >= 50 → C
+    else → fail
+            ```
+            ```
+            marks = int(input("enter marks: "))
+            if marks < 0 or marks > 100:
+                print("you have entered invalid marks")
+            if marks >= 90:
+                print("you have got A class")
+            elif marks >= 75:
+                print("you have got B class")
+            elif marks >= 50:
+                print("you have got C class")
+            else:
+                print("you have failed")
+
+            ```
+            ---
+            - will the below program work correctly? why?
+            ```
+input: age
+task:
+    > 18 → adult
+    > 5 → child
+    > 13 → teen
+    else → toddler
+            ```
+            - no, since for age > 13, it will still show as child <!-- .element: class="fragment" -->
+            - remember, order matters <!-- .element: class="fragment" -->
+            ---
+            ```
+input: number
+task:
+    divisible by 3 → three
+    divisible by 5 → five
+    else → none
+            ```
+            ```
+number = int(input("enter number: "))
+if number % 3 == 0:
+    print("number is divisible by 3")
+if number % 5 == 0:
+    print("number is divisible by 5")
+if number % 3 != 0 or number % 5 != 0:
+    print("number is not divisible by 3 or 5")
+            ```
+            - this was a trick question <!-- .element: class="fragment" -->
+            - if-elif-else will not work here <!-- .element: class="fragment" -->
+            - coz for 15, if-elif-else will only print 3 not both 3 and 5 <!-- .element: class="fragment" -->
+            - should we use "OR" or "AND" for the last condition? think... <!-- .element: class="fragment" -->
+            ---
+            ### concept - 1
+            #### and → both conditions must be true
+            ```
+x = 10
+if x > 5 and x < 15:
+    print("yes")
+else:
+    print("no")
+            ```
+            - what will be output? why?
+            - what if x = 20? <!-- .element: class="fragment" -->
+            - what if x = 5? <!-- .element: class="fragment" -->
+            ---
+            #### real world example
+            ```
+input: marks
+task: marks >= 40 AND marks <= 100
+output: valid / invalid
+            ```
+            ```
+marks = int(input())
+
+if marks >= 40 and marks <= 100:
+    print("valid")
+else:
+    print("invalid")
+            ```
+            ---
+            #### range thinking
+            ```
+input: number
+task: between 10 and 20
+output: yes / no
+            ```
+            ```
+n = int(input())
+
+if n >= 10 and n <= 20:
+    print("yes")
+else:
+    print("no")
+            ```
+            ---
+            ### concept - 2
+            #### or → at least one true
+            ```
+x = 5
+
+if x < 3 or x > 10:
+    print("outside")
+else:
+    print("inside")
+            ```
+            - what will be output? why?
+            - what if x = 12? <!-- .element: class="fragment" -->
+            - what if x = 7? <!-- .element: class="fragment" -->
+            ---
+            #### real world example
+            ```
+input: number
+task: divisible by 3 OR 5
+output: yes / no
+            ```
+            ```
+n = int(input())
+
+if n % 3 == 0 or n % 5 == 0:
+    print("yes")
+else:
+    print("no")
+            ```
+            ---
+            #### real world example
+            ```
+input: age
+task: < 5 OR > 60
+output: discount
+            ```
+            ```
+age = int(input())
+
+if age < 5 or age > 60:
+    print("discount")
+else:
+    print("no discount")
+            ```
+            ---
+            ### concept - 3
+            #### mixing with if-elif
+            ```
+input: marks
+task:
+    >= 90 → A
+    >= 40 AND < 90 → pass
+    else → fail
+            ```
+            ```
+marks = int(input())
+
+if marks >= 90:
+    print("A")
+elif marks >= 40 and marks < 90:
+    print("pass")
+else:
+    print("fail")
+            ```
+            - the AND is not really necessary here; added just to explain concept <!-- .element: class="fragment" -->
+            ---
+            ```
+x = 10
+
+if x > 5 or x < 15:
+    print("yes")
+            ```
+            - what does this program do?
+            - what is the bug? <!-- .element: class="fragment" -->
+            - how will you fix it? <!-- .element: class="fragment" -->
+            ---
+            ### common mistakes
+            - confusing `and` vs `or`
+            - forgetting that both conditions matter <!-- .element: class="fragment" -->
+            - missing boundary values <!-- .element: class="fragment" -->
+            - writing always-true conditions <!-- .element: class="fragment" -->
+            ---
+            ### homework
+            #### predict
+            ```
+x = 10
+if x > 5 and x < 15:
+    print("A")
+else:
+    print("B")
+            ```
+            ```
+x = 20
+if x > 5 and x < 15:
+    print("A")
+else:
+    print("B")
+            ```
+            ```
+x = 7
+if x < 5 or x > 10:
+    print("A")
+else:
+    print("B")
+            ```
+            ---
+            #### write
+            ```
+input: number
+task: between 1 and 100
+output: valid / invalid
+            ```
+            ```
+input: number
+task: divisible by 2 AND 3
+output: yes / no
+            ```
+            ```
+input: number
+task: divisible by 3 OR 5
+output: yes / no
+            ```
+            ```
+input: age
+task: >= 18 AND <= 60
+output: working age / not
+            ```
+            ```
+input: marks
+task: >= 40 AND <= 100
+output: pass / invalid
+            ```
+            ```
+input: number
+task: < 0 OR > 100
+output: out of range
+            ```
+            ---
+            #### challenge
+            ```
+input: number
+task:
+    divisible by both 3 and 5 → special
+    divisible by only 3 → three
+    divisible by only 5 → five
+    else → none
+            ```
+            ```
+input: marks
+task:
+    < 0 OR > 100 → invalid
+    >= 90 → A
+    >= 40 → pass
+    else → fail
+            ```
           </textarea>
         </section>
       </div>
