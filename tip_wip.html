@@ -2115,7 +2115,6 @@ else:
 ---
 - rewrite this using if-elif
 ```
-# number
 n = int(input())
 
 if n > 0:
@@ -2128,13 +2127,16 @@ else:
 ```
 ```
 number = int(input("enter number: "))
-if number > 0 and number % 2 == 0:
+if (number > 0) and (number % 2) == 0:
     print("positive even")
-elif number > 0 and number % 2 != 0:
+elif (number > 0) and (number % 2) != 0:
     print("positive odd")
 else:
     print("negative")
 ```
+- here, the program has become smaller, but more difficult to understand <!-- .element: class="fragment" -->
+- even after using brackets :( <!-- .element: class="fragment" -->
+- thus, 1st program is better. always try to simplify :) <!-- .element: class="fragment" -->
 ---
 ## Day - 8
 - concepts
