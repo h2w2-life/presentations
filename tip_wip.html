@@ -975,13 +975,13 @@ else:
             else:
                 print("second number is bigger or equal")
             ```
+            ---
             - input number → check >10
             ```
             num = int(input("enter a number: "))
             if num > 10:
                 print("entered number is greater than 10")
             ```
-            ---
             - modify even/odd → also print “zero” separately
             ```
             num = int(input("enter a number: "))
@@ -1650,6 +1650,680 @@ task:
     >= 40 → pass
     else → fail
             ```
+          </textarea>
+        </section>
+        <!-- ======================================== -->
+        <section id="day7" data-markdown>
+          <textarea data-template># Thinking in Python</textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+## Day - 7
+### concepts
+  1. nested if (if inside if)
+  2. nested vs elif
+  3. edge cases
+
+---
+### Day - 6: homework
+#### write
+```
+input: number
+task: between 1 and 100
+output: valid / invalid
+```
+```
+number = int(input("enter number: "))
+if number >= 1 and number <= 100:
+    print("valid")
+else:
+    print("invalid")
+```
+- another way of solving the same problem
+  - notice that i'm using OR instead of AND
+```
+number = int(input("enter number: "))
+if (number < 1) or (number > 100):
+    print("invalid")
+else:
+    print("valid")
+```
+---
+```
+input: number
+task: divisible by 2 AND 3
+output: yes / no
+```
+```
+number = int(input("enter number: "))
+if (number % 2 == 0) or (number % 3 == 0):
+    print("yes")
+else:
+    print("no")
+```
+- can you find the bug in this program? <!-- .element: class="fragment" -->
+- or -> and <!-- .element: class="fragment" -->
+- use brackets -- they make it easier to read and understand code <!-- .element: class="fragment" -->
+---
+```
+input: number
+task: divisible by 3 OR 5
+output: yes / no
+```
+```
+number = int(input("enter number: "))
+if (number % 3 == 0) or (number % 5 == 0):
+    print("yes")
+else:
+    print("no")
+```
+- other examples are exactly the same; so not showing them here... <!-- .element: class="fragment" -->
+---
+#### challenge
+```
+input: number
+task:
+    divisible by both 3 and 5 → special
+    divisible by only 3 → three
+    divisible by only 5 → five
+    else → none
+```
+```
+number = int(input("enter number: "))
+if (number % 3 == 0) and (number % 5 == 0):
+    print("special")
+elif (number % 3 == 0):
+    print("three")
+elif (number % 5 == 0):
+    print("five")
+else:
+    print("none")
+```
+---
+- do you remember, this was homework from day-5?
+```
+input: number
+task:
+    divisible by 3 → three
+    divisible by 5 → five
+    else → none
+```
+```
+number = int(input("enter number: "))
+if number % 3 == 0:
+    print("number is divisible by 3")
+if number % 5 == 0:
+    print("number is divisible by 5")
+if number % 3 != 0 or number % 5 != 0:
+    print("number is not divisible by 3 or 5")
+```
+---
+```
+input: marks
+task:
+    < 0 OR > 100 → invalid
+    >= 90 → A
+    >= 40 → pass
+    else → fail
+```
+```
+marks = int(input("enter marks: "))
+if (marks < 0) or (marks > 100):
+    print("invalid")
+elif (marks >= 90):
+    print("A")
+elif (marks >= 40):
+    print("pass")
+else:
+    print("fail")
+```
+- notice this pattern; you will see it repeatedly <!-- .element: class="fragment" -->
+  - range checking <!-- .element: class="fragment" -->
+  - conditions (if-elif-elif...) <!-- .element: class="fragment" -->
+  - final else <!-- .element: class="fragment" -->
+---
+### concept - 1 (nested if)
+- second condition runs only if first is true
+```
+x = 10
+
+if x > 5:
+    if x > 8:
+        print("big")
+```
+```
+x = 7
+```
+```
+x = 4
+```
+```
+x = 9
+```
+---
+### concept - 2 (real examples)
+```
+# amount
+amt = int(input())
+
+if amt >= 500:
+    if amt >= 1000:
+        print("big")
+    else:
+        print("medium")
+else:
+    print("small")
+```
+```
+# number
+n = int(input())
+
+if n > 0:
+    if n % 2 == 0:
+        print("positive even")
+    else:
+        print("positive odd")
+else:
+    print("negative")
+```
+---
+```
+# battery
+b = int(input())
+
+if b >= 30:
+    if b >= 80:
+        print("high")
+    else:
+        print("medium")
+else:
+    print("low")
+```
+```
+# distance
+d = int(input())
+
+if d < 10:
+    if d < 2:
+        print("walk")
+    else:
+        print("bike")
+else:
+    print("car")
+```
+---
+```
+# score
+s = int(input())
+
+if s >= 50:
+    if s >= 75:
+        print("distinction")
+    else:
+        print("pass")
+else:
+    print("fail")
+```
+---
+### concept - 3 (nested vs elif)
+
+```
+# elif
+x = 80
+
+if x >= 75:
+    print("distinction")
+elif x >= 50:
+    print("pass")
+```
+```
+# nested
+x = 80
+
+if x >= 50:
+    if x >= 75:
+        print("distinction")
+    else:
+        print("pass")
+```
+---
+### homework
+#### predict
+```
+x = 10
+
+if x > 5:
+    if x > 8:
+        print("A")
+```
+- solve the same for
+  - x = 6
+  - x = 4
+  - x = 8
+```
+x = 10
+
+if x > 5:
+    print("A")
+if x > 8:
+    print("B")
+```
+---
+#### write
+```
+input: number
+task:
+    > 0 → check divisible by 2
+    else → negative
+```
+```
+input: amount
+task:
+    >= 500 → check >= 2000 → premium / normal
+    else → low
+```
+```
+input: time
+task:
+    < 18 → check < 12 → morning / afternoon
+    else → evening
+```
+```
+input: battery
+task:
+    >= 20 → check >= 80 → high / medium
+    else → low
+```
+---
+```
+input: distance
+task:
+    < 15 → check < 5 → near / mid
+    else → far
+```
+```
+input: score
+task:
+    >= 40 → check >= 70 → good / pass
+    else → fail
+```
+```
+input: number
+task:
+    > 10 → check even/odd
+    else → small
+```
+```
+input: weight
+task:
+    >= 50 → check >= 80 → heavy / normal
+    else → light
+```
+---
+#### challenge
+```
+input: number
+task:
+    > 0:
+        even → positive even
+        else → positive odd
+    == 0 → zero
+    else → negative
+```
+---
+- rewrite this using if-elif
+```
+# score
+s = int(input())
+
+if s >= 50:
+    if s >= 75:
+        print("distinction")
+    else:
+        print("pass")
+else:
+    print("fail")
+```
+---
+- rewrite this using if-elif
+```
+# number
+n = int(input())
+
+if n > 0:
+    if n % 2 == 0:
+        print("positive even")
+    else:
+        print("positive odd")
+else:
+    print("negative")
+```
+          </textarea>
+        </section>
+        <!-- ======================================== -->
+        <section id="day8" data-markdown>
+          <textarea data-template># Thinking in Python</textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+## Day - 8
+- concepts
+  1. combine all conditions
+  2. multi-rule problems
+  3. think before coding
+---
+### Day - 7: homework
+#### write
+```
+input: number
+task:
+    > 0 → check divisible by 2
+    else → negative
+
+```
+```
+number = int(input("enter number: "))
+if (number > 0):
+    if number % 2 == 0:
+        print("positive even")
+    else:
+        print("positive odd")
+else:
+    print("negative")
+
+```
+---
+```
+input: amount
+task:
+    >= 500 → check >= 2000 → premium / normal
+    else → low
+```
+```
+amount = int(input("enter amount: "))
+if (amount >= 500):
+    if amount >= 2000:
+        print("premium")
+    else:
+        print("normal")
+else:
+    print("low")
+```
+---
+```
+input: time
+task:
+    < 18 → check < 12 → morning / afternoon
+    else → evening
+```
+```
+time = int(input("enter time: "))
+if (time < 18):
+    if time < 12:
+        print("morning")
+    else:
+        print("afternoon")
+else:
+    print("evening")
+```
+- other examples are exactly the same; so not showing them here... <!-- .element: class="fragment" -->
+---
+#### challenge
+```
+input: number
+task:
+    > 0:
+        even → positive even
+        else → positive odd
+    == 0 → zero
+    else → negative
+```
+```
+number = int(input("enter number: "))
+if number > 0:
+    if number % 2 == 0:
+        print("positive even")
+    else:
+        print("positive odd")
+elif number == 0:
+    print("zero")
+else:
+    print("negative")
+```
+- note the indentation <!-- .element: class="fragment" -->
+- it's extremely critical in this example <!-- .element: class="fragment" -->
+- now you understand why indentation is so important in python <!-- .element: class="fragment" -->
+- because it defines blocks <!-- .element: class="fragment" -->
+---
+- rewrite this using if-elif
+```
+s = int(input())
+if s >= 50:
+    if s >= 75:
+        print("distinction")
+    else:
+        print("pass")
+else:
+    print("fail")
+```
+```
+s = int(input())
+if s >= 75:
+    print("distinction")
+elif s >= 50:
+    print("pass")
+else:
+    print("fail")
+```
+- note that i've changed the order of conditions <!-- .element: class="fragment" -->
+- now the program has become much more simple, readable and easier to understand <!-- .element: class="fragment" -->
+- many times the same program can be written in multiple ways. always try to simplify :) <!-- .element: class="fragment" -->
+---
+- rewrite this using if-elif
+```
+# number
+n = int(input())
+
+if n > 0:
+    if n % 2 == 0:
+        print("positive even")
+    else:
+        print("positive odd")
+else:
+    print("negative")
+```
+```
+number = int(input("enter number: "))
+if number > 0 and number % 2 == 0:
+    print("positive even")
+elif number > 0 and number % 2 != 0:
+    print("positive odd")
+else:
+    print("negative")
+```
+---
+### concept - 1 (ordering)
+- decide order before coding
+  - correct order
+```
+    < 0 OR > 100 → invalid
+    >= 90 → A
+    >= 40 → pass
+    else → fail
+```
+  - wrong order (why?)
+```
+    < 0 OR > 100 → invalid
+    >= 40 → pass
+    >= 90 → A
+    else → fail
+```
+---
+### concept - 2 (multi-rule)
+- combination of AND, OR and if-elif-...-else
+```
+n = int(input())
+
+if n % 3 == 0 and n % 5 == 0:
+    print("special")
+elif n % 3 == 0:
+    print("three")
+elif n % 5 == 0:
+    print("five")
+else:
+    print("none")
+```
+```
+# time example
+t = int(input())
+
+if t < 0 or t > 23:
+    print("invalid")
+elif t < 12:
+    print("morning")
+elif t < 18:
+    print("afternoon")
+else:
+    print("night")
+```
+---
+```
+# speed
+s = int(input())
+
+if s < 0:
+    print("invalid")
+elif s > 100:
+    print("too fast")
+elif s > 60:
+    print("fast")
+else:
+    print("normal")
+```
+---
+### concept - 3 (notice the repeating pattern)
+- plan before writing code
+  1. invalid ........ (identify and check for range)
+  2. top case ....... (first if)
+  3. middle ......... (middle elif (can be multiple))
+  4. default ........ (final else)
+```
+marks = int(input("enter marks: "))
+if (marks < 0) or (marks > 100):
+    print("invalid")
+elif (marks >= 90):
+    print("A")
+elif (marks >= 40):
+    print("pass")
+else:
+    print("fail")
+```
+---
+### concept - 4 (there can be multiple ways to write the same program)
+```
+number = int(input("enter number: "))
+if (number % 3 == 0) and (number % 5 == 0):
+    print("special")
+elif (number % 3 == 0):
+    print("three")
+elif (number % 5 == 0):
+    print("five")
+else:
+    print("none")
+```
+```
+number = int(input("enter number: "))
+if number % 3 == 0:
+    print("three")
+if number % 5 == 0:
+    print("five")
+if number % 3 != 0 or number % 5 != 0:
+    print("special")
+```
+- how do you print "none"? in this method? <!-- .element: class="fragment" -->
+---
+### homework
+#### predict
+```
+n = 15
+
+if n % 3 == 0 and n % 5 == 0:
+    print("A")
+elif n % 3 == 0:
+    print("B")
+```
+- solve the same for
+  - n = 10
+  - n = 95
+  - n = 45
+  - n = -5
+---
+
+#### write
+```
+input: battery
+task:
+    < 0 OR > 100 → invalid
+    >= 80 → high
+    >= 30 → medium
+    else → low
+```
+```
+input: amount
+task:
+    < 0 → invalid
+    >= 2000 → premium
+    >= 500 → normal
+    else → small
+```
+```
+input: day (1–7)
+task:
+    < 1 OR > 7 → invalid
+    6 or 7 → weekend
+    else → weekday
+```
+---
+```
+input: speed
+task:
+    < 0 → invalid
+    > 100 → too fast
+    > 60 → fast
+    else → normal
+```
+```
+input: number
+task:
+    divisible by 3 AND 5 → special
+    divisible by 3 → three
+    divisible by 5 → five
+    else → none
+```
+---
+#### challenge
+```
+input: number
+task:
+    < 0 → negative
+    == 0 → zero
+    else
+        divisible by 3 AND 5 → special
+        divisible by 3 → three
+        divisible by 5 → five
+        else → none
+```
+---
+- modify this program to print "none" when number is not divisible by either 3 or 5
+```
+number = int(input("enter number: "))
+if number % 3 == 0:
+    print("three")
+if number % 5 == 0:
+    print("five")
+if number % 3 != 0 or number % 5 != 0:
+    print("special")
+```
           </textarea>
         </section>
       </div>
