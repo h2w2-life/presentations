@@ -1377,7 +1377,7 @@ task:
             marks = int(input("enter marks: "))
             if marks >= 95:
                 print("you are a topper")
-            if marks >= 90:
+            elif marks >= 90:
                 print("you have got A class")
             elif marks >= 75:
                 print("you have got B class")
@@ -1400,7 +1400,7 @@ task:
             marks = int(input("enter marks: "))
             if marks < 0 or marks > 100:
                 print("you have entered invalid marks")
-            if marks >= 90:
+            elif marks >= 90:
                 print("you have got A class")
             elif marks >= 75:
                 print("you have got B class")
@@ -1436,7 +1436,7 @@ if number % 3 == 0:
     print("number is divisible by 3")
 if number % 5 == 0:
     print("number is divisible by 5")
-if number % 3 != 0 or number % 5 != 0:
+if number % 3 != 0 and number % 5 != 0:
     print("number is not divisible by 3 or 5")
             ```
             - this was a trick question <!-- .element: class="fragment" -->
