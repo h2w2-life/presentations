@@ -39,7 +39,7 @@
           <li><a href="#day5">Day - 5</a></li>
           <li><a href="#day6">Day - 6</a></li>
           <li><a href="#day7">Day - 7</a></li>
-          <!-- <li><a href="#day8">Day - 8</a></li> -->
+          <li><a href="#day8">Day - 8</a></li>
           </ul>
         </section>
         <section id="day1" data-markdown>
@@ -2007,6 +2007,353 @@ else:
       print("sum of digits: ", sum_digits)
 ```
 - find sum of 3 digit number
+          </textarea>
+        </section>
+        <!-- ======================================== -->
+        <section id="day8" data-markdown>
+          <textarea data-template># Thinking in Python</textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+### Day - 7: homework
+#### write
+```
+input: number
+task:
+    > 0 → check divisible by 2
+    else → negative
+
+```
+```
+number = int(input("enter number: "))
+if (number > 0):
+    if number % 2 == 0:
+        print("positive even")
+    else:
+        print("positive odd")
+else:
+    print("negative")
+
+```
+---
+```
+input: amount
+task:
+    >= 500 → check >= 2000 → premium / normal
+    else → low
+```
+```
+amount = int(input("enter amount: "))
+if (amount >= 500):
+    if amount >= 2000:
+        print("premium")
+    else:
+        print("normal")
+else:
+    print("low")
+```
+---
+```
+input: time
+task:
+    < 18 → check < 12 → morning / afternoon
+    else → evening
+```
+```
+time = int(input("enter time: "))
+if (time < 18):
+    if time < 12:
+        print("morning")
+    else:
+        print("afternoon")
+else:
+    print("evening")
+```
+- other examples are exactly the same; so not showing them here... <!-- .element: class="fragment" -->
+---
+#### challenge
+```
+input: number
+task:
+    > 0:
+        even → positive even
+        else → positive odd
+    == 0 → zero
+    else → negative
+```
+```
+number = int(input("enter number: "))
+if number > 0:
+    if number % 2 == 0:
+        print("positive even")
+    else:
+        print("positive odd")
+elif number == 0:
+    print("zero")
+else:
+    print("negative")
+```
+- note the indentation <!-- .element: class="fragment" -->
+- it's extremely critical in this example <!-- .element: class="fragment" -->
+- now you understand why indentation is so important in python <!-- .element: class="fragment" -->
+- because it defines blocks <!-- .element: class="fragment" -->
+---
+- rewrite this using if-elif
+```
+s = int(input())
+if s >= 50:
+    if s >= 75:
+        print("distinction")
+    else:
+        print("pass")
+else:
+    print("fail")
+```
+```
+s = int(input())
+if s >= 75:
+    print("distinction")
+elif s >= 50:
+    print("pass")
+else:
+    print("fail")
+```
+- note that i've changed the order of conditions <!-- .element: class="fragment" -->
+- now the program has become much more simple, readable and easier to understand <!-- .element: class="fragment" -->
+- many times the same program can be written in multiple ways. always try to simplify :) <!-- .element: class="fragment" -->
+---
+- rewrite this using if-elif
+```
+n = int(input())
+
+if n > 0:
+    if n % 2 == 0:
+        print("positive even")
+    else:
+        print("positive odd")
+else:
+    print("negative")
+```
+```
+number = int(input("enter number: "))
+if (number > 0) and (number % 2) == 0:
+    print("positive even")
+elif (number > 0) and (number % 2) != 0:
+    print("positive odd")
+else:
+    print("negative")
+```
+- here, the program has become smaller, but more difficult to understand <!-- .element: class="fragment" -->
+- even after using brackets :( <!-- .element: class="fragment" -->
+- thus, 1st program is better. always try to simplify :) <!-- .element: class="fragment" -->
+---
+- sum of digits of 2 digit number can be solved as follows
+```
+      num = int(input("enter a number: ")) # 45
+      remainder = num % 10 # 5
+      quotient = num // 10 # 4
+      sum_digits = remainder + quotient
+      print("sum of digits: ", sum_digits)
+```
+- find sum of 3 digit number
+```
+num = int(input("enter a number: "))     # 453
+units = num % 10                         # 3
+tens = (num / 100) //  10                # 5
+hundreds = num // 100                    # 4
+sum_digits = units + tens + hundreds
+print("sum of digits: ", sum_digits)
+```
+---
+## Day - 8
+- concepts
+  1. combine all conditions
+  2. multi-rule problems
+  3. think before coding
+---
+### concept - 1 (ordering)
+- decide order before coding
+  - correct order
+```
+    < 0 OR > 100 → invalid
+    >= 90 → A
+    >= 40 → pass
+    else → fail
+```
+  - wrong order (why?)
+```
+    < 0 OR > 100 → invalid
+    >= 40 → pass
+    >= 90 → A
+    else → fail
+```
+---
+### concept - 2 (multi-rule)
+- combination of AND, OR and if-elif-...-else
+```
+n = int(input())
+
+if n % 3 == 0 and n % 5 == 0:
+    print("special")
+elif n % 3 == 0:
+    print("three")
+elif n % 5 == 0:
+    print("five")
+else:
+    print("none")
+```
+```
+# time example
+t = int(input())
+
+if t < 0 or t > 23:
+    print("invalid")
+elif t < 12:
+    print("morning")
+elif t < 18:
+    print("afternoon")
+else:
+    print("night")
+```
+---
+```
+# speed
+s = int(input())
+
+if s < 0:
+    print("invalid")
+elif s > 100:
+    print("too fast")
+elif s > 60:
+    print("fast")
+else:
+    print("normal")
+```
+---
+### concept - 3 (notice the repeating pattern)
+- plan before writing code
+  1. invalid ........ (identify and check for range)
+  2. top case ....... (first if)
+  3. middle ......... (middle elif (can be multiple))
+  4. default ........ (final else)
+```
+marks = int(input("enter marks: "))
+if (marks < 0) or (marks > 100):
+    print("invalid")
+elif (marks >= 90):
+    print("A")
+elif (marks >= 40):
+    print("pass")
+else:
+    print("fail")
+```
+---
+### concept - 4 (there can be multiple ways to write the same program)
+```
+number = int(input("enter number: "))
+if (number % 3 == 0) and (number % 5 == 0):
+    print("special")
+elif (number % 3 == 0):
+    print("three")
+elif (number % 5 == 0):
+    print("five")
+else:
+    print("none")
+```
+```
+number = int(input("enter number: "))
+if number % 3 == 0:
+    print("three")
+if number % 5 == 0:
+    print("five")
+if number % 3 != 0 or number % 5 != 0:
+    print("special")
+```
+- how do you print "none"? in this method? <!-- .element: class="fragment" -->
+---
+### homework
+#### predict
+```
+n = 15
+
+if n % 3 == 0 and n % 5 == 0:
+    print("A")
+elif n % 3 == 0:
+    print("B")
+```
+- solve the same for
+  - n = 10
+  - n = 95
+  - n = 45
+  - n = -5
+---
+
+#### write
+```
+input: battery
+task:
+    < 0 OR > 100 → invalid
+    >= 80 → high
+    >= 30 → medium
+    else → low
+```
+```
+input: amount
+task:
+    < 0 → invalid
+    >= 2000 → premium
+    >= 500 → normal
+    else → small
+```
+```
+input: day (1–7)
+task:
+    < 1 OR > 7 → invalid
+    6 or 7 → weekend
+    else → weekday
+```
+---
+```
+input: speed
+task:
+    < 0 → invalid
+    > 100 → too fast
+    > 60 → fast
+    else → normal
+```
+```
+input: number
+task:
+    divisible by 3 AND 5 → special
+    divisible by 3 → three
+    divisible by 5 → five
+    else → none
+```
+---
+#### challenge
+```
+input: number
+task:
+    < 0 → negative
+    == 0 → zero
+    else
+        divisible by 3 AND 5 → special
+        divisible by 3 → three
+        divisible by 5 → five
+        else → none
+```
+---
+- there's a bug in the last if; find and fix it
+- also, modify this program to print "none" when number is not divisible by either 3 or 5
+```
+number = int(input("enter number: "))
+if number % 3 == 0:
+    print("three")
+if number % 5 == 0:
+    print("five")
+if number % 3 != 0 or number % 5 != 0:
+    print("special")
+```
           </textarea>
         </section>
       </div>

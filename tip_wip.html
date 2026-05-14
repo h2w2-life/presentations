@@ -2147,6 +2147,24 @@ else:
 - even after using brackets :( <!-- .element: class="fragment" -->
 - thus, 1st program is better. always try to simplify :) <!-- .element: class="fragment" -->
 ---
+- sum of digits of 2 digit number can be solved as follows
+```
+      num = int(input("enter a number: ")) # 45
+      remainder = num % 10 # 5
+      quotient = num // 10 # 4
+      sum_digits = remainder + quotient
+      print("sum of digits: ", sum_digits)
+```
+- find sum of 3 digit number
+```
+num = int(input("enter a number: "))     # 453
+units = num % 10                         # 3
+tens = (num / 100) //  10                # 5
+hundreds = num // 100                    # 4
+sum_digits = units + tens + hundreds
+print("sum of digits: ", sum_digits)
+```
+---
 ## Day - 8
 - concepts
   1. combine all conditions
@@ -2325,7 +2343,8 @@ task:
         else → none
 ```
 ---
-- modify this program to print "none" when number is not divisible by either 3 or 5
+- there's a bug in the last if; find and fix it
+- also, modify this program to print "none" when number is not divisible by either 3 or 5
 ```
 number = int(input("enter number: "))
 if number % 3 == 0:
