@@ -41,9 +41,9 @@
                 <h3>Week - 3</h3>
                 <ul>
                   <li><a href="#day9">Day - 9</a></li>
-                  <!-- <li><a href="#day10">Day - 10</a></li>
+                  <li><a href="#day10">Day - 10</a></li>
                   <li><a href="#day11">Day - 11</a></li>
-                  <li><a href="#day12">Day - 12</a></li> -->
+                  <li><a href="#day12">Day - 12</a></li>
                 </ul>
               </div>
               <div class="right">
@@ -2383,8 +2383,7 @@ if number % 3 != 0 or number % 5 != 0:
   1. why loops exist
   2. basic for loop
   3. conditions inside loops
-  4. counting and totals
-  5. common mistakes
+  4. common mistakes
 ---
 ### concept - 1 (why loops exist)
 - how do we print the 1st 5 numbers?
@@ -2456,27 +2455,6 @@ for i in range(1, 101):
 ```
 for i in range(10, 0, -1):
     print(i)
-```
----
-### concept - 4 (counting and totals)
-- variables can change repeatedly
-```
-count = 0
-
-for i in range(1, 101):
-    if i % 2 == 0:
-        count = count + 1
-
-print(count)
-```
----
-```
-total = 0
-
-for i in range(1, 11):
-    total = total + i
-
-print(total)
 ```
 ---
 ### common mistakes
@@ -2586,6 +2564,263 @@ print numbers from 1 to 100:
 - fizz if divisible by 3
 - buzz if divisible by 5
 - fizzbuzz if divisible by both
+```
+          </textarea>
+        </section>
+        <!-- ======================================== -->
+        <section id="day10" data-markdown>
+          <textarea data-template># Thinking in Python</textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+## Day - 10
+- concepts
+  1. counter (count)
+  2. accumulator (total)
+  3. filtering inside loops
+  4. common mistakes
+---
+### concept - 1 (counter)
+- variables can change repeatedly
+- count stores number of matching items
+```
+count = 0
+
+for i in range(1, 11):
+    if i % 2 == 0:
+        count = count + 1
+
+print(count)
+```
+---
+```
+count = 0
+
+for i in range(1, 11):
+    if i % 2 != 0:
+        count = count + 1
+
+print(count)
+```
+```
+count = 0
+
+for i in range(1, 101):
+    if i % 5 == 0:
+        count = count + 1
+
+print(count)
+```
+```
+count = 0
+
+for i in range(1, 51):
+    if i >= 10 and i <= 20:
+        count = count + 1
+
+print(count)
+```
+---
+- not just count, but other variables too
+```
+largest = 0
+
+for i in range(1, 11):
+    if i > largest:
+        largest = i
+
+print(largest)
+```
+---
+### concept - 2 (accumulator)
+- variables can change repeatedly
+- total stores running sum
+
+```
+total = 0
+
+for i in range(1, 6):
+    total = total + i
+
+print(total)
+```
+---
+```
+total = 0
+
+for i in range(1, 11):
+    if i % 2 == 0:
+        total = total + i
+
+print(total)
+```
+```
+total = 0
+
+for i in range(1, 21):
+    if i % 3 == 0:
+        total = total + i
+
+print(total)
+```
+```
+total = 0
+
+for i in range(1, 6):
+    total = total + (i * i)
+
+print(total)
+```
+---
+### concept - 3 (filtering + processing)
+- process only matching values
+```
+for i in range(1, 11):
+    if i % 2 == 0:
+        print(i * i)
+```
+```
+for i in range(1, 51):
+    if i % 3 == 0 and i % 5 != 0:
+        print(i)
+```
+```
+for i in range(1, 11):
+    print(5 * i)
+```
+```
+for i in range(10, 0, -1):
+    print(5 * i)
+```
+---
+### common mistakes
+```
+total = 0
+# forgetting initial value
+```
+```
+for i in range(1, 6):
+    total = total + i
+    print(total)
+```
+```
+count = 0
+# count vs total confusion
+```
+---
+### homework
+#### predict
+```
+total = 0
+
+for i in range(1, 4):
+    total = total + i
+
+print(total)
+```
+```
+count = 0
+
+for i in range(1, 6):
+    if i % 2 == 0:
+        count = count + 1
+
+print(count)
+```
+```
+total = 0
+
+for i in range(1, 6):
+    if i % 2 == 0:
+        total = total + i
+
+print(total)
+```
+---
+```
+for i in range(1, 6):
+    print(i * i)
+```
+```
+for i in range(10, 0, -1):
+    print(i)
+```
+```
+count = 0
+
+for i in range(1, 11):
+    if i % 3 == 0:
+        count = count + 1
+
+print(count)
+```
+```
+total = 0
+
+for i in range(1, 6):
+    total = total + (i * i)
+
+print(total)
+```
+```
+for i in range(1, 11):
+    if i % 4 == 0:
+        print(i)
+```
+---
+#### write
+```
+find sum from 1 to 100
+```
+```
+find sum of even numbers from 1 to 100
+```
+```
+find sum of odd numbers from 1 to 100
+```
+```
+count numbers divisible by 3 from 1 to 100
+```
+```
+count numbers divisible by both 2 and 5
+```
+```
+print all squares from 1 to 20
+```
+```
+print all cubes from 1 to 10
+```
+```
+print multiplication table of 7
+```
+```
+print reverse table of 9
+```
+```
+print numbers divisible by 4 but not 6
+```
+```
+find sum of numbers divisible by 5
+```
+```
+count odd numbers between 50 and 100
+```
+---
+#### challenge
+```
+find sum of numbers divisible by both 3 and 5 from 1 to 100
+```
+```
+count numbers divisible by 2 but not 3
+```
+```
+print numbers:
+- fizz if divisible by 3
+- buzz if divisible by 5
+- fizzbuzz if divisible by both
+```
+```
+find largest square from 1 to 20
 ```
           </textarea>
         </section>
