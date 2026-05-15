@@ -22,7 +22,7 @@
   <body>
     <div class="reveal">
       <div class="slides">
-        <!-- =============== week - 1 =============== -->
+        <!-- ############### week - 1 ############### -->
         <!-- ======================================== -->
         <section data-markdown>
           <textarea data-template># Thinking in Python</textarea>
@@ -941,7 +941,7 @@ else:
             - rewrite all programs without seeing
           </textarea>
         </section>
-        <!-- =============== week - 2 =============== -->
+        <!-- ############### week - 2 ############### -->
         <!-- ======================================== -->
         <section id="day5" data-markdown>
           <textarea data-template># Thinking in Python</textarea>
@@ -2371,7 +2371,7 @@ if number % 3 != 0 or number % 5 != 0:
 ```
           </textarea>
         </section>
-        <!-- =============== week - 3 =============== -->
+        <!-- ############### week - 3 ############### -->
         <!-- ======================================== -->
         <section id="day9" data-markdown>
           <textarea data-template># Thinking in Python</textarea>
@@ -2470,6 +2470,11 @@ range(1, 5)
 for i in range(5):
     i = 100
 ```
+---
+### food for thought
+- how can we count the number of numbers divisible by 3 OR 5 between 1 and 100?
+- what is the sum of all odd numbers between 1 and 250?
+- we'll learn this in the next class. so stay tuned :) <!-- .element: class="fragment" -->
 ---
 ### homework
 #### predict
@@ -2821,6 +2826,297 @@ print numbers:
 ```
 ```
 find largest square from 1 to 20
+```
+          </textarea>
+        </section>
+        <!-- ======================================== -->
+        <section id="day11" data-markdown>
+          <textarea data-template># Thinking in Python</textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+## Day - 11
+- concepts
+  1. why while loops exist
+  2. while loop syntax
+  3. condition-controlled repetition
+  4. user-controlled repetition
+---
+### concept - 1 (why while loops exist)
+```
+# for loop
+for i in range(5):
+    print(i)
+```
+- for loops are good when repetitions are known
+- sometimes repetitions are unknown
+- while repeats until condition becomes false
+- what if we want to stop after a certain condition is met? <!-- .element: class="fragment" -->
+  - eg, we find the 1st prime number in a list of numbers?
+  - OR what if user decides when to stop?
+---
+### concept - 2 (basic while loop)
+- loop runs while condition is true
+- you must change variable yourself
+```
+i = 1
+
+while i <= 5:
+    print(i)
+    i = i + 1
+```
+```
+i = 1
+
+while i <= 3:
+    print("hello")
+    i = i + 1
+```
+---
+```
+i = 5
+
+while i >= 1:
+    print(i)
+    i = i - 1
+```
+```
+i = 2
+
+while i <= 10:
+    print(i)
+    i = i + 2
+```
+---
+### concept - 3 (infinite loops)
+- condition must eventually become false
+```
+i = 1
+
+while i <= 5:
+    print(i)
+```
+```
+i = 1
+
+while i <= 5:
+    print(i)
+    i = i - 1
+```
+---
+### concept - 4 (user-controlled repetition)
+- user decides when loop stops
+```
+choice = "y"
+
+while choice == "y":
+    print("running")
+
+    choice = input("continue? y/n: ")
+```
+---
+```
+count = 0
+choice = "y"
+
+while choice == "y":
+    n = int(input("enter number: "))
+
+    count = count + 1
+
+    choice = input("continue? y/n: ")
+
+print("user entered ", count, " numbers")
+```
+---
+```
+even = 0
+choice = "y"
+
+while choice == "y":
+    n = int(input())
+
+    if n % 2 == 0:
+        even = even + 1
+
+    choice = input("continue? y/n: ")
+
+print("user entered ", even, " even numbers")
+```
+---
+```
+total = 0
+choice = "y"
+
+while choice == "y":
+    n = int(input())
+
+    total = total + n
+
+    choice = input("continue? y/n: ")
+
+print("the sum of all numbers entered by user is ", total)
+```
+---
+### common mistakes
+```
+# forgetting to update i
+while i <= 5:
+    print(i)
+```
+```
+# infinite loop, since condition never becomes false
+i = 1
+
+while i <= 5:
+    print(i)
+    i = i - 1
+```
+```
+# input outside loop accidentally
+total = 0
+choice = "y"
+
+while choice == "y":
+    n = int(input())
+    total = total + n
+
+choice = input("continue? y/n: ")
+
+print("the sum of all numbers entered by user is ", total)
+
+```
+---
+### homework
+#### predict
+```
+i = 1
+
+while i <= 3:
+    print(i)
+    i = i + 1
+```
+```
+i = 5
+
+while i >= 1:
+    print(i)
+    i = i - 1
+```
+```
+i = 2
+
+while i <= 10:
+    print(i)
+    i = i + 2
+```
+```
+i = 1
+
+while i <= 5:
+    print(i)
+```
+---
+```
+count = 0
+i = 1
+
+while i <= 5:
+    count = count + 1
+    i = i + 1
+
+print(count)
+```
+```
+total = 0
+i = 1
+
+while i <= 3:
+    total = total + i
+    i = i + 1
+
+print(total)
+```
+```
+i = 10
+
+while i >= 1:
+    print(i)
+    i = i - 2
+```
+```
+i = 1
+
+while i <= 5:
+    print(i * i)
+    i = i + 1
+```
+---
+#### write
+```
+print numbers from 1 to 10 using while
+```
+```
+print numbers from 10 to 1 using while
+```
+```
+print all even numbers from 1 to 20
+```
+```
+print all odd numbers from 1 to 20
+```
+```
+find sum from 1 to 10
+```
+```
+count even numbers from 1 to 50
+```
+```
+take numbers until user enters n
+```
+```
+count how many numbers user entered
+```
+```
+find total sum of user-entered numbers
+```
+```
+count even user-entered numbers
+```
+```
+print multiplication table of 7
+```
+```
+print reverse table of 8
+```
+---
+#### challenge
+```
+find sum of even numbers entered by user
+```
+```
+count positive and negative user inputs separately
+```
+```
+keep taking marks until user says n:
+- invalid if <0 or >100
+- count pass students
+```
+```
+menu:
+1 → hello
+2 → bye
+3 → stop
+repeat until stop
+```
+---
+#### super challenge
+```
+# calculator
+repeat until user says n:
+input operator (+, -, *, /) and 2 numbers
+calculate the answer and print it
+eg, if user inputs "*", "2" and "4", then the output should be 8
 ```
           </textarea>
         </section>
