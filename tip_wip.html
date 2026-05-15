@@ -87,13 +87,10 @@
             ```
 public class Main {
     public static void main(String[] args) {
-
         int a = 10;
         int b = 20;
         int c = 30;
-
         float determinant = b * b - 4 * a * c;
-
         System.out.println("Determinant = " + determinant);
     }
 }
@@ -401,16 +398,12 @@ print(x + 10)
             ```
 a = 7
 b = 2
-
 # addition
 print ('Sum: ', a + b)
-
 # subtraction
 print ('Subtraction: ', a - b)
-
 # multiplication
 print ('Multiplication: ', a * b)
-
 # division
 print ('Division: ', a / b)
             ```
@@ -419,13 +412,10 @@ print ('Division: ', a / b)
             ```
 a = 7
 b = 2
-
 # floor division
 print ('Floor Division: ', a // b)
-
 # modulo
 print ('Modulo: ', a % b)
-
 # a to the power b
 print ('Power: ', a ** b)
             ```
@@ -434,22 +424,16 @@ print ('Power: ', a ** b)
             ```
 a = 5
 b = 2
-
 # equal to operator
 print('a == b =', a == b)
-
 # not equal to operator
 print('a != b =', a != b)
-
 # greater than operator
 print('a > b =', a > b)
-
 # less than operator
 print('a < b =', a < b)
-
 # greater than or equal to operator
 print('a >= b =', a >= b)
-
 # less than or equal to operator
 print('a <= b =', a <= b)
             ```
@@ -458,15 +442,11 @@ print('a <= b =', a <= b)
             ```
 # assign 10 to a
 a = 10
-
 # assign 5 to b
 b = 5
-
 # assign the sum of a and b to a
 a += b      # a = a + b
-
 print(a)
-
 # Output: 15
             ```
             ---
@@ -532,7 +512,6 @@ print(3 * 3 + 1)
             ### Day - 2: input
             ```
             x = input()
-
             x = input()
             y = input()
             ```
@@ -601,11 +580,9 @@ print(3 * 3 + 1)
 # (True only if all operands are True, else False)
 print(True and True)
 print(True and False)
-
 # logical OR
 # (False only if all operands are False, else True)
 print(True or False)
-
 # logical NOT
 # (True -> False, and False -> True)
 print(not True)
@@ -615,11 +592,8 @@ print(not True)
             ```
 a = 5
 b = 6
-
 print((a > 2) and (b >= 6))
-
 print((a > 2) or (b >= 6))
-
 print(not (a > 2))
             ```
             ---
@@ -844,7 +818,6 @@ else:
             ```
 a = int(input())
 b = int(input())
-
 if a > b:
     print("a bigger")
 else:
@@ -1105,7 +1078,6 @@ task:
             ```
             ```
 marks = int(input())
-
 if marks >= 75:
     print("distinction")
 elif marks >= 50:
@@ -1124,7 +1096,6 @@ task:
             ```
             ```
 age = int(input())
-
 if age < 13:
     print("child")
 elif age < 18:
@@ -1137,7 +1108,6 @@ else:
             - boundary awareness
             ```
 marks = 50
-
 if marks >= 75:
     print("distinction")
 elif marks >= 50:
@@ -1151,7 +1121,6 @@ else:
             #### predict
             ```
 marks = 80
-
 if marks >= 75:
     print("A")
 elif marks >= 50:
@@ -1159,7 +1128,6 @@ elif marks >= 50:
             ```
             ```
 marks = 40
-
 if marks >= 75:
     print("A")
 elif marks >= 50:
@@ -1169,7 +1137,6 @@ else:
             ```
             ```
 x = 10
-
 if x > 5:
     print("A")
 if x > 8:
@@ -1178,7 +1145,6 @@ if x > 8:
             ---
             ```
 x = 10
-
 if x > 5:
     print("A")
 elif x > 8:
@@ -1186,7 +1152,6 @@ elif x > 8:
             ```
             ```
 marks = 80
-
 if marks >= 50:
     print("pass")
 elif marks >= 75:
@@ -1423,7 +1388,6 @@ task:
                 print("you have got C class")
             else:
                 print("you have failed")
-
             ```
             ---
             - will the below program work correctly? why?
@@ -1489,7 +1453,6 @@ output: valid / invalid
             ```
             ```
 marks = int(input())
-
 if marks >= 40 and marks <= 100:
     print("valid")
 else:
@@ -1504,7 +1467,6 @@ output: yes / no
             ```
             ```
 n = int(input())
-
 if n >= 10 and n <= 20:
     print("yes")
 else:
@@ -1515,7 +1477,6 @@ else:
             #### or → at least one true
             ```
 x = 5
-
 if x < 3 or x > 10:
     print("outside")
 else:
@@ -1533,7 +1494,6 @@ output: yes / no
             ```
             ```
 n = int(input())
-
 if n % 3 == 0 or n % 5 == 0:
     print("yes")
 else:
@@ -1548,7 +1508,6 @@ output: discount
             ```
             ```
 age = int(input())
-
 if age < 5 or age > 60:
     print("discount")
 else:
@@ -1566,7 +1525,6 @@ task:
             ```
             ```
 marks = int(input())
-
 if marks >= 90:
     print("A")
 elif marks >= 40 and marks < 90:
@@ -1578,7 +1536,6 @@ else:
             ---
             ```
 x = 10
-
 if x > 5 or x < 15:
     print("yes")
             ```
@@ -1794,13 +1751,11 @@ else:
   1. nested if (if inside if)
   2. nested vs elif
   3. edge cases
-
 ---
 ### concept - 1 (nested if)
 - second condition runs only if first is true
 ```
 x = 10
-
 if x > 5:
     if x > 8:
         print("big")
@@ -1819,7 +1774,6 @@ x = 9
 ```
 # amount
 amt = int(input())
-
 if amt >= 500:
     if amt >= 1000:
         print("big")
@@ -1831,7 +1785,6 @@ else:
 ```
 # number
 n = int(input())
-
 if n > 0:
     if n % 2 == 0:
         print("positive even")
@@ -1844,7 +1797,6 @@ else:
 ```
 # battery
 b = int(input())
-
 if b >= 30:
     if b >= 80:
         print("high")
@@ -1856,7 +1808,6 @@ else:
 ```
 # distance
 d = int(input())
-
 if d < 10:
     if d < 2:
         print("walk")
@@ -1869,7 +1820,6 @@ else:
 ```
 # score
 s = int(input())
-
 if s >= 50:
     if s >= 75:
         print("distinction")
@@ -1880,11 +1830,9 @@ else:
 ```
 ---
 ### concept - 3 (nested vs elif)
-
 ```
 # elif
 x = 80
-
 if x >= 75:
     print("distinction")
 elif x >= 50:
@@ -1893,7 +1841,6 @@ elif x >= 50:
 ```
 # nested
 x = 80
-
 if x >= 50:
     if x >= 75:
         print("distinction")
@@ -1905,7 +1852,6 @@ if x >= 50:
 #### predict
 ```
 x = 10
-
 if x > 5:
     if x > 8:
         print("A")
@@ -1916,7 +1862,6 @@ if x > 5:
   - x = 8
 ```
 x = 10
-
 if x > 5:
     print("A")
 if x > 8:
@@ -1989,7 +1934,6 @@ task:
 ```
 # score
 s = int(input())
-
 if s >= 50:
     if s >= 75:
         print("distinction")
@@ -2003,7 +1947,6 @@ else:
 ```
 # number
 n = int(input())
-
 if n > 0:
     if n % 2 == 0:
         print("positive even")
@@ -2037,7 +1980,6 @@ input: number
 task:
     > 0 → check divisible by 2
     else → negative
-
 ```
 ```
 number = int(input("enter number: "))
@@ -2048,7 +1990,6 @@ if (number > 0):
         print("positive odd")
 else:
     print("negative")
-
 ```
 ---
 ```
@@ -2140,7 +2081,6 @@ else:
 - rewrite this using if-elif
 ```
 n = int(input())
-
 if n > 0:
     if n % 2 == 0:
         print("positive even")
@@ -2207,7 +2147,6 @@ print("sum of digits: ", sum_digits)
 - combination of AND, OR and if-elif-...-else
 ```
 n = int(input())
-
 if n % 3 == 0 and n % 5 == 0:
     print("special")
 elif n % 3 == 0:
@@ -2220,7 +2159,6 @@ else:
 ```
 # time example
 t = int(input())
-
 if t < 0 or t > 23:
     print("invalid")
 elif t < 12:
@@ -2234,7 +2172,6 @@ else:
 ```
 # speed
 s = int(input())
-
 if s < 0:
     print("invalid")
 elif s > 100:
@@ -2290,7 +2227,6 @@ if number % 3 != 0 or number % 5 != 0:
 #### predict
 ```
 n = 15
-
 if n % 3 == 0 and n % 5 == 0:
     print("A")
 elif n % 3 == 0:
@@ -2302,7 +2238,6 @@ elif n % 3 == 0:
   - n = 45
   - n = -5
 ---
-
 #### write
 ```
 input: battery
@@ -2405,6 +2340,7 @@ for i in range(5):
 ```
 - loop runs multiple times <!-- .element: class="fragment" -->
 - i changes automatically <!-- .element: class="fragment" -->
+- range generates numbers <!-- .element: class="fragment" -->
 ---
 ```
 for i in range(3):
@@ -2420,17 +2356,16 @@ for i in range(1, 6):
 for i in range(1, 11):
     print(i)
 ```
-- 1st number is included, 2nd number is excluded <!-- .element: class="fragment" -->
+- range => 1st number is included, 2nd number is excluded <!-- .element: class="fragment" -->
 ---
 ```
 for i in range(5, 0, -1):
     print(i)
 ```
-- 3rd number is a jump; can be +ve or -ve <!-- .element: class="fragment" -->
+- range => 3rd number is a jump; can be positive or negative <!-- .element: class="fragment" -->
 ---
 ### concept - 3 (conditions inside loops)
 - combine loops + if
-- predict the following programs outputs
 ```
 for i in range(1, 11):
     if i % 2 == 0:
@@ -2446,7 +2381,6 @@ for i in range(1, 21):
     if i % 3 == 0:
         print(i)
 ```
----
 ```
 for i in range(1, 101):
     if i % 3 == 0 and i % 5 == 0:
@@ -2472,8 +2406,8 @@ for i in range(5):
 ```
 ---
 ### food for thought
-- how can we count the number of numbers divisible by 3 OR 5 between 1 and 100?
-- what is the sum of all odd numbers between 1 and 250?
+- how can we count the number of numbers (divisible by 3 OR 5) (between 1 and 100)?
+- what is the (sum of all odd numbers) (between 1 and 250)?
 - we'll learn this in the next class. so stay tuned :) <!-- .element: class="fragment" -->
 ---
 ### homework
@@ -2502,19 +2436,15 @@ for i in range(1, 11):
 ---
 ```
 total = 0
-
 for i in range(1, 4):
     total = total + i
-
 print(total)
 ```
 ```
 count = 0
-
 for i in range(1, 11):
     if i % 3 == 0:
         count = count + 1
-
 print(count)
 ```
 ```
@@ -2579,7 +2509,11 @@ print numbers from 1 to 100:
         <section data-markdown>
           <textarea data-template>
 ## Day - 10
-- concepts
+### food for thought
+- how can we count the number of numbers (divisible by 3 OR 5) (between 1 and 100)?
+- what is the (sum of all odd numbers) (between 1 and 250)?
+---
+### concepts
   1. counter (count)
   2. accumulator (total)
   3. filtering inside loops
@@ -2590,90 +2524,71 @@ print numbers from 1 to 100:
 - count stores number of matching items
 ```
 count = 0
-
 for i in range(1, 11):
     if i % 2 == 0:
         count = count + 1
-
 print(count)
 ```
 ---
 ```
 count = 0
-
 for i in range(1, 11):
     if i % 2 != 0:
         count = count + 1
-
 print(count)
 ```
 ```
 count = 0
-
 for i in range(1, 101):
     if i % 5 == 0:
         count = count + 1
-
 print(count)
 ```
 ```
 count = 0
-
 for i in range(1, 51):
     if i >= 10 and i <= 20:
         count = count + 1
-
 print(count)
 ```
 ---
 - not just count, but other variables too
 ```
 largest = 0
-
 for i in range(1, 11):
     if i > largest:
         largest = i
-
 print(largest)
 ```
 ---
 ### concept - 2 (accumulator)
-- variables can change repeatedly
+- again, variables can change repeatedly
 - total stores running sum
-
 ```
 total = 0
-
 for i in range(1, 6):
     total = total + i
-
 print(total)
 ```
 ---
 ```
 total = 0
-
 for i in range(1, 11):
     if i % 2 == 0:
         total = total + i
-
 print(total)
 ```
 ```
 total = 0
-
 for i in range(1, 21):
     if i % 3 == 0:
         total = total + i
-
 print(total)
 ```
 ```
 total = 0
-
 for i in range(1, 6):
     total = total + (i * i)
-
 print(total)
 ```
 ---
@@ -2706,39 +2621,38 @@ total = 0
 ```
 for i in range(1, 6):
     total = total + i
-    print(total)
+    print(total) # wrong indentation
 ```
 ```
 count = 0
 # count vs total confusion
 ```
 ---
+### food for thought
+- range gives us numbers in a particular order
+- how do we go beyond "range"?
+- we'll learn this in the next class. so stay tuned :) <!-- .element: class="fragment" -->
+---
 ### homework
 #### predict
 ```
 total = 0
-
 for i in range(1, 4):
     total = total + i
-
 print(total)
 ```
 ```
 count = 0
-
 for i in range(1, 6):
     if i % 2 == 0:
         count = count + 1
-
 print(count)
 ```
 ```
 total = 0
-
 for i in range(1, 6):
     if i % 2 == 0:
         total = total + i
-
 print(total)
 ```
 ---
@@ -2752,19 +2666,15 @@ for i in range(10, 0, -1):
 ```
 ```
 count = 0
-
 for i in range(1, 11):
     if i % 3 == 0:
         count = count + 1
-
 print(count)
 ```
 ```
 total = 0
-
 for i in range(1, 6):
     total = total + (i * i)
-
 print(total)
 ```
 ```
@@ -2790,10 +2700,10 @@ count numbers divisible by 3 from 1 to 100
 count numbers divisible by both 2 and 5
 ```
 ```
-print all squares from 1 to 20
+print squares of all numbers from 1 to 20
 ```
 ```
-print all cubes from 1 to 10
+print cubes of all numbers from 1 to 10
 ```
 ```
 print multiplication table of 7
@@ -2802,10 +2712,10 @@ print multiplication table of 7
 print reverse table of 9
 ```
 ```
-print numbers divisible by 4 but not 6
+print numbers divisible by 4 but not 6 between 1 and 100
 ```
 ```
-find sum of numbers divisible by 5
+find sum of numbers divisible by 5 between 1 and 100
 ```
 ```
 count odd numbers between 50 and 100
@@ -2816,7 +2726,7 @@ count odd numbers between 50 and 100
 find sum of numbers divisible by both 3 and 5 from 1 to 100
 ```
 ```
-count numbers divisible by 2 but not 3
+count numbers divisible by 2 but not 3 between 1 and 100
 ```
 ```
 print numbers:
@@ -2836,11 +2746,256 @@ find largest square from 1 to 20
         <section data-markdown>
           <textarea data-template>
 ## Day - 11
-- concepts
+### food for thought
+- range gives us numbers in a particular order
+- how do we go beyond "range"?
+---
+### concepts
+  1. why lists exist
+  2. range returns a list
+  3. accessing list values
+  4. looping through lists
+---
+### concept - 1 (why lists exist)
+- lists store many values together
+- avoid creating too many variables
+```
+a = 10
+b = 20
+c = 30
+d = 40
+e = 50
+```
+```
+# what if we had 100 numbers?
+```
+```
+nums = [10, 20, 30, 40, 50]
+print(nums)
+```
+```
+data = [5, -2, 10, 0, 7]
+print(data)
+```
+---
+### concept - 2 (range retuns a list)
+```
+list(range(6))                # [0, 1, 2, 3, 4, 5]
+list(range(1, 6))             # [1, 2, 3, 4, 5]
+list(range(1, 6, 2))          # [1, 3, 5]
+list(range(6, 1, -2))         # [6, 4, 2]
+```
+- ignore the "list" part for now
+---
+### concept - 2 (accessing values)
+- index starts from 0
+```
+nums = [10, 20, 30, 40]
+print(nums[0])          # 10
+print(nums[1])          # 20
+print(nums[2])          # 30
+```
+```
+nums = [10, 20, 30, 40]
+print(nums[3])          # 40
+```
+```
+nums = [10, 20, 30]
+nums[1] = 100
+print(nums)             # [10, 100, 30]
+```
+```
+nums = [10, 20]
+print(nums[5])          # error
+```
+---
+### concept - 3 (loops + lists)
+- loops process one item at a time
+```
+nums = [5, 10, 15, 20]
+for i in nums:
+    print(i)
+```
+```
+nums = [2, 5, 8, 11, 14]
+for i in nums:
+    if i % 2 == 0:
+        print(i)
+```
+```
+nums = [5, -2, 8, -1, 0]
+for i in nums:
+    if i > 0:
+        print(i)
+```
+---
+```
+nums = [2, 5, 8, 11, 14]
+count = 0
+for i in nums:
+    if i % 2 == 0:
+        count = count + 1
+print(count)
+```
+```
+nums = [5, 10, 15]
+total = 0
+for i in nums:
+    total = total + i
+print(total)
+```
+```
+nums = [5, 12, 3, 20, 8]
+largest = nums[0]
+for i in nums:
+    if i > largest:
+        largest = i
+print(largest)
+```
+---
+### common mistakes
+```
+# index starts from 0, not 1
+```
+```
+# accessing out-of-bounds index
+nums = [10, 20]
+print(nums[5])
+```
+```
+for i in nums:
+# i is VALUE, not index
+```
+---
+### food for thought
+- till now number of repetitions were known
+- what if we want to stop when user asks us to?
+- we'll learn this in the next class. so stay tuned :) <!-- .element: class="fragment" -->
+---
+### homework
+#### predict
+```
+nums = [10, 20, 30]
+print(nums[0])
+```
+```
+nums = [10, 20, 30]
+print(nums[2])
+```
+```
+nums = [5, 8, 11]
+for i in nums:
+    print(i)
+```
+```
+nums = [2, 5, 8]
+for i in nums:
+    if i % 2 == 0:
+        print(i)
+```
+```
+nums = [5, 10, 15]
+total = 0
+for i in nums:
+    total = total + i
+print(total)
+```
+---
+```
+nums = [5, 2, 8]
+largest = nums[0]
+for i in nums:
+    if i > largest:
+        largest = i
+print(largest)
+```
+```
+nums = [1, 3, 5]
+count = 0
+for i in nums:
+    if i % 2 == 0:
+        count = count + 1
+print(count)
+```
+```
+nums = [4, -2, 7]
+for i in nums:
+    if i > 0:
+        print(i)
+```
+---
+#### write
+```
+create a list of 5 numbers and print it
+```
+```
+print first item of a list
+```
+```
+print last item of a list
+```
+```
+change second value of a list
+```
+```
+print all values using loop
+```
+```
+print all even values
+```
+```
+print all odd values
+```
+```
+count positive values
+```
+```
+count negative values
+```
+```
+find sum of list values
+```
+```
+find largest value
+```
+```
+find smallest value
+```
+---
+#### challenge
+```
+count numbers divisible by both 2 and 3
+```
+```
+find sum of only positive values
+```
+```
+find largest even value
+```
+---
+#### super challenge
+```
+find second largest value
+```
+          </textarea>
+        </section>
+        <!-- ======================================== -->
+        <section id="day12" data-markdown>
+          <textarea data-template># Thinking in Python</textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+## Day - 12
+### food for thought
+- till now number of repetitions were known
+- what if we want to stop when user asks us to?
+---
+### concepts
   1. why while loops exist
   2. while loop syntax
   3. condition-controlled repetition
   4. user-controlled repetition
+  4. looping through lists using while
 ---
 ### concept - 1 (why while loops exist)
 ```
@@ -2860,14 +3015,12 @@ for i in range(5):
 - you must change variable yourself
 ```
 i = 1
-
 while i <= 5:
     print(i)
     i = i + 1
 ```
 ```
 i = 1
-
 while i <= 3:
     print("hello")
     i = i + 1
@@ -2875,14 +3028,12 @@ while i <= 3:
 ---
 ```
 i = 5
-
 while i >= 1:
     print(i)
     i = i - 1
 ```
 ```
 i = 2
-
 while i <= 10:
     print(i)
     i = i + 2
@@ -2892,13 +3043,11 @@ while i <= 10:
 - condition must eventually become false
 ```
 i = 1
-
 while i <= 5:
     print(i)
 ```
 ```
 i = 1
-
 while i <= 5:
     print(i)
     i = i - 1
@@ -2908,54 +3057,51 @@ while i <= 5:
 - user decides when loop stops
 ```
 choice = "y"
-
 while choice == "y":
     print("running")
-
     choice = input("continue? y/n: ")
 ```
 ---
 ```
 count = 0
 choice = "y"
-
 while choice == "y":
     n = int(input("enter number: "))
-
     count = count + 1
-
     choice = input("continue? y/n: ")
-
 print("user entered ", count, " numbers")
 ```
 ---
 ```
 even = 0
 choice = "y"
-
 while choice == "y":
     n = int(input())
-
     if n % 2 == 0:
         even = even + 1
-
     choice = input("continue? y/n: ")
-
 print("user entered ", even, " even numbers")
 ```
 ---
 ```
 total = 0
 choice = "y"
-
 while choice == "y":
     n = int(input())
-
     total = total + n
-
     choice = input("continue? y/n: ")
-
 print("the sum of all numbers entered by user is ", total)
+```
+---
+### concept - 4 (looping through lists using while)
+```
+nums = [5, 10, 15]
+
+i = 0
+
+while i < 3:
+    print(nums[i])
+    i = i + 1
 ```
 ---
 ### common mistakes
@@ -2967,7 +3113,6 @@ while i <= 5:
 ```
 # infinite loop, since condition never becomes false
 i = 1
-
 while i <= 5:
     print(i)
     i = i - 1
@@ -2976,43 +3121,35 @@ while i <= 5:
 # input outside loop accidentally
 total = 0
 choice = "y"
-
 while choice == "y":
     n = int(input())
     total = total + n
-
 choice = input("continue? y/n: ")
-
 print("the sum of all numbers entered by user is ", total)
-
 ```
 ---
 ### homework
 #### predict
 ```
 i = 1
-
 while i <= 3:
     print(i)
     i = i + 1
 ```
 ```
 i = 5
-
 while i >= 1:
     print(i)
     i = i - 1
 ```
 ```
 i = 2
-
 while i <= 10:
     print(i)
     i = i + 2
 ```
 ```
 i = 1
-
 while i <= 5:
     print(i)
 ```
@@ -3020,33 +3157,27 @@ while i <= 5:
 ```
 count = 0
 i = 1
-
 while i <= 5:
     count = count + 1
     i = i + 1
-
 print(count)
 ```
 ```
 total = 0
 i = 1
-
 while i <= 3:
     total = total + i
     i = i + 1
-
 print(total)
 ```
 ```
 i = 10
-
 while i >= 1:
     print(i)
     i = i - 2
 ```
 ```
 i = 1
-
 while i <= 5:
     print(i * i)
     i = i + 1
@@ -3116,7 +3247,8 @@ repeat until stop
 repeat until user says n:
 input operator (+, -, *, /) and 2 numbers
 calculate the answer and print it
-eg, if user inputs "*", "2" and "4", then the output should be 8
+eg, if user inputs "*", "2" and "4",
+    then the output should be 8
 ```
           </textarea>
         </section>
