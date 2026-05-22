@@ -55,11 +55,11 @@
               </div>
             </div>
         </section>
+        <!-- ############### week - 1 ############### -->
+        <!-- ======================================== -->
         <section id="day1" data-markdown>
           <textarea data-template># Thinking in Python</textarea>
         </section>
-        <!-- =============== week - 1 =============== -->
-        <!-- ======================================== -->
         <section data-markdown>
           <textarea data-template>
             ## what and what not
@@ -87,13 +87,10 @@
             ```
 public class Main {
     public static void main(String[] args) {
-
         int a = 10;
         int b = 20;
         int c = 30;
-
         float determinant = b * b - 4 * a * c;
-
         System.out.println("Determinant = " + determinant);
     }
 }
@@ -401,16 +398,12 @@ print(x + 10)
             ```
 a = 7
 b = 2
-
 # addition
 print ('Sum: ', a + b)
-
 # subtraction
 print ('Subtraction: ', a - b)
-
 # multiplication
 print ('Multiplication: ', a * b)
-
 # division
 print ('Division: ', a / b)
             ```
@@ -419,13 +412,10 @@ print ('Division: ', a / b)
             ```
 a = 7
 b = 2
-
 # floor division
 print ('Floor Division: ', a // b)
-
 # modulo
 print ('Modulo: ', a % b)
-
 # a to the power b
 print ('Power: ', a ** b)
             ```
@@ -434,22 +424,16 @@ print ('Power: ', a ** b)
             ```
 a = 5
 b = 2
-
 # equal to operator
 print('a == b =', a == b)
-
 # not equal to operator
 print('a != b =', a != b)
-
 # greater than operator
 print('a > b =', a > b)
-
 # less than operator
 print('a < b =', a < b)
-
 # greater than or equal to operator
 print('a >= b =', a >= b)
-
 # less than or equal to operator
 print('a <= b =', a <= b)
             ```
@@ -458,15 +442,11 @@ print('a <= b =', a <= b)
             ```
 # assign 10 to a
 a = 10
-
 # assign 5 to b
 b = 5
-
 # assign the sum of a and b to a
 a += b      # a = a + b
-
 print(a)
-
 # Output: 15
             ```
             ---
@@ -532,7 +512,6 @@ print(3 * 3 + 1)
             ### Day - 2: input
             ```
             x = input()
-
             x = input()
             y = input()
             ```
@@ -601,11 +580,9 @@ print(3 * 3 + 1)
 # (True only if all operands are True, else False)
 print(True and True)
 print(True and False)
-
 # logical OR
 # (False only if all operands are False, else True)
 print(True or False)
-
 # logical NOT
 # (True -> False, and False -> True)
 print(not True)
@@ -615,11 +592,8 @@ print(not True)
             ```
 a = 5
 b = 6
-
 print((a > 2) and (b >= 6))
-
 print((a > 2) or (b >= 6))
-
 print(not (a > 2))
             ```
             ---
@@ -844,7 +818,6 @@ else:
             ```
 a = int(input())
 b = int(input())
-
 if a > b:
     print("a bigger")
 else:
@@ -941,7 +914,7 @@ else:
             - rewrite all programs without seeing
           </textarea>
         </section>
-        <!-- =============== week - 2 =============== -->
+        <!-- ############### week - 2 ############### -->
         <!-- ======================================== -->
         <section id="day5" data-markdown>
           <textarea data-template># Thinking in Python</textarea>
@@ -1105,7 +1078,6 @@ task:
             ```
             ```
 marks = int(input())
-
 if marks >= 75:
     print("distinction")
 elif marks >= 50:
@@ -1124,7 +1096,6 @@ task:
             ```
             ```
 age = int(input())
-
 if age < 13:
     print("child")
 elif age < 18:
@@ -1137,7 +1108,6 @@ else:
             - boundary awareness
             ```
 marks = 50
-
 if marks >= 75:
     print("distinction")
 elif marks >= 50:
@@ -1151,7 +1121,6 @@ else:
             #### predict
             ```
 marks = 80
-
 if marks >= 75:
     print("A")
 elif marks >= 50:
@@ -1159,7 +1128,6 @@ elif marks >= 50:
             ```
             ```
 marks = 40
-
 if marks >= 75:
     print("A")
 elif marks >= 50:
@@ -1169,7 +1137,6 @@ else:
             ```
             ```
 x = 10
-
 if x > 5:
     print("A")
 if x > 8:
@@ -1178,7 +1145,6 @@ if x > 8:
             ---
             ```
 x = 10
-
 if x > 5:
     print("A")
 elif x > 8:
@@ -1186,7 +1152,6 @@ elif x > 8:
             ```
             ```
 marks = 80
-
 if marks >= 50:
     print("pass")
 elif marks >= 75:
@@ -1423,7 +1388,6 @@ task:
                 print("you have got C class")
             else:
                 print("you have failed")
-
             ```
             ---
             - will the below program work correctly? why?
@@ -1489,7 +1453,6 @@ output: valid / invalid
             ```
             ```
 marks = int(input())
-
 if marks >= 40 and marks <= 100:
     print("valid")
 else:
@@ -1504,7 +1467,6 @@ output: yes / no
             ```
             ```
 n = int(input())
-
 if n >= 10 and n <= 20:
     print("yes")
 else:
@@ -1515,7 +1477,6 @@ else:
             #### or → at least one true
             ```
 x = 5
-
 if x < 3 or x > 10:
     print("outside")
 else:
@@ -1533,7 +1494,6 @@ output: yes / no
             ```
             ```
 n = int(input())
-
 if n % 3 == 0 or n % 5 == 0:
     print("yes")
 else:
@@ -1548,7 +1508,6 @@ output: discount
             ```
             ```
 age = int(input())
-
 if age < 5 or age > 60:
     print("discount")
 else:
@@ -1566,7 +1525,6 @@ task:
             ```
             ```
 marks = int(input())
-
 if marks >= 90:
     print("A")
 elif marks >= 40 and marks < 90:
@@ -1578,7 +1536,6 @@ else:
             ---
             ```
 x = 10
-
 if x > 5 or x < 15:
     print("yes")
             ```
@@ -1794,13 +1751,11 @@ else:
   1. nested if (if inside if)
   2. nested vs elif
   3. edge cases
-
 ---
 ### concept - 1 (nested if)
 - second condition runs only if first is true
 ```
 x = 10
-
 if x > 5:
     if x > 8:
         print("big")
@@ -1819,7 +1774,6 @@ x = 9
 ```
 # amount
 amt = int(input())
-
 if amt >= 500:
     if amt >= 1000:
         print("big")
@@ -1831,7 +1785,6 @@ else:
 ```
 # number
 n = int(input())
-
 if n > 0:
     if n % 2 == 0:
         print("positive even")
@@ -1844,7 +1797,6 @@ else:
 ```
 # battery
 b = int(input())
-
 if b >= 30:
     if b >= 80:
         print("high")
@@ -1856,7 +1808,6 @@ else:
 ```
 # distance
 d = int(input())
-
 if d < 10:
     if d < 2:
         print("walk")
@@ -1869,7 +1820,6 @@ else:
 ```
 # score
 s = int(input())
-
 if s >= 50:
     if s >= 75:
         print("distinction")
@@ -1880,11 +1830,9 @@ else:
 ```
 ---
 ### concept - 3 (nested vs elif)
-
 ```
 # elif
 x = 80
-
 if x >= 75:
     print("distinction")
 elif x >= 50:
@@ -1893,7 +1841,6 @@ elif x >= 50:
 ```
 # nested
 x = 80
-
 if x >= 50:
     if x >= 75:
         print("distinction")
@@ -1905,7 +1852,6 @@ if x >= 50:
 #### predict
 ```
 x = 10
-
 if x > 5:
     if x > 8:
         print("A")
@@ -1916,7 +1862,6 @@ if x > 5:
   - x = 8
 ```
 x = 10
-
 if x > 5:
     print("A")
 if x > 8:
@@ -1989,7 +1934,6 @@ task:
 ```
 # score
 s = int(input())
-
 if s >= 50:
     if s >= 75:
         print("distinction")
@@ -2003,7 +1947,6 @@ else:
 ```
 # number
 n = int(input())
-
 if n > 0:
     if n % 2 == 0:
         print("positive even")
@@ -2030,14 +1973,13 @@ else:
         </section>
         <section data-markdown>
           <textarea data-template>
-### Day - 7: homework
-#### write
+## Day - 7: homework
+### write
 ```
 input: number
 task:
     > 0 → check divisible by 2
     else → negative
-
 ```
 ```
 number = int(input("enter number: "))
@@ -2048,7 +1990,6 @@ if (number > 0):
         print("positive odd")
 else:
     print("negative")
-
 ```
 ---
 ```
@@ -2086,7 +2027,7 @@ else:
 ```
 - other examples are exactly the same; so not showing them here... <!-- .element: class="fragment" -->
 ---
-#### challenge
+### challenge
 ```
 input: number
 task:
@@ -2140,7 +2081,6 @@ else:
 - rewrite this using if-elif
 ```
 n = int(input())
-
 if n > 0:
     if n % 2 == 0:
         print("positive even")
@@ -2207,7 +2147,6 @@ print("sum of digits: ", sum_digits)
 - combination of AND, OR and if-elif-...-else
 ```
 n = int(input())
-
 if n % 3 == 0 and n % 5 == 0:
     print("special")
 elif n % 3 == 0:
@@ -2220,7 +2159,6 @@ else:
 ```
 # time example
 t = int(input())
-
 if t < 0 or t > 23:
     print("invalid")
 elif t < 12:
@@ -2234,7 +2172,6 @@ else:
 ```
 # speed
 s = int(input())
-
 if s < 0:
     print("invalid")
 elif s > 100:
@@ -2290,7 +2227,6 @@ if number % 3 != 0 or number % 5 != 0:
 #### predict
 ```
 n = 15
-
 if n % 3 == 0 and n % 5 == 0:
     print("A")
 elif n % 3 == 0:
@@ -2302,7 +2238,6 @@ elif n % 3 == 0:
   - n = 45
   - n = -5
 ---
-
 #### write
 ```
 input: battery
@@ -3021,6 +2956,279 @@ find largest even value
 #### super challenge
 ```
 find second largest value
+```
+          </textarea>
+        </section>
+        <!-- ======================================== -->
+        <section id="day12" data-markdown>
+          <textarea data-template># Thinking in Python</textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+## Day - 12
+### food for thought
+- till now number of repetitions were known
+- what if we want to stop when user asks us to?
+---
+### concepts
+  1. why while loops exist
+  2. while loop syntax
+  3. condition-controlled repetition
+  4. user-controlled repetition
+  4. looping through lists using while
+---
+### concept - 1 (why while loops exist)
+```
+# for loop
+for i in range(5):
+    print(i)
+```
+- for loops are good when repetitions are known
+- sometimes repetitions are unknown
+- while repeats until condition becomes false
+- what if we want to stop after a certain condition is met? <!-- .element: class="fragment" -->
+  - eg, we find the 1st prime number in a list of numbers?
+  - OR what if user decides when to stop?
+---
+### concept - 2 (basic while loop)
+- loop runs while condition is true
+- you must change variable yourself
+```
+i = 1
+while i <= 5:
+    print(i)
+    i = i + 1
+```
+```
+i = 1
+while i <= 3:
+    print("hello")
+    i = i + 1
+```
+---
+```
+i = 5
+while i >= 1:
+    print(i)
+    i = i - 1
+```
+```
+i = 2
+while i <= 10:
+    print(i)
+    i = i + 2
+```
+---
+### concept - 3 (infinite loops)
+- condition must eventually become false
+```
+i = 1
+while i <= 5:
+    print(i)
+```
+```
+i = 1
+while i <= 5:
+    print(i)
+    i = i - 1
+```
+---
+### concept - 4 (user-controlled repetition)
+- user decides when loop stops
+```
+choice = "y"
+while choice == "y":
+    print("running")
+    choice = input("continue? y/n: ")
+```
+---
+```
+count = 0
+choice = "y"
+while choice == "y":
+    n = int(input("enter number: "))
+    count = count + 1
+    choice = input("continue? y/n: ")
+print("user entered ", count, " numbers")
+```
+---
+```
+even = 0
+choice = "y"
+while choice == "y":
+    n = int(input())
+    if n % 2 == 0:
+        even = even + 1
+    choice = input("continue? y/n: ")
+print("user entered ", even, " even numbers")
+```
+---
+```
+total = 0
+choice = "y"
+while choice == "y":
+    n = int(input())
+    total = total + n
+    choice = input("continue? y/n: ")
+print("the sum of all numbers entered by user is ", total)
+```
+---
+### concept - 4 (looping through lists using while)
+```
+nums = [5, 10, 15]
+
+i = 0
+
+while i < 3:
+    print(nums[i])
+    i = i + 1
+```
+---
+### common mistakes
+```
+# forgetting to update i
+while i <= 5:
+    print(i)
+```
+```
+# infinite loop, since condition never becomes false
+i = 1
+while i <= 5:
+    print(i)
+    i = i - 1
+```
+```
+# input outside loop accidentally
+total = 0
+choice = "y"
+while choice == "y":
+    n = int(input())
+    total = total + n
+choice = input("continue? y/n: ")
+print("the sum of all numbers entered by user is ", total)
+```
+---
+### homework
+#### predict
+```
+i = 1
+while i <= 3:
+    print(i)
+    i = i + 1
+```
+```
+i = 5
+while i >= 1:
+    print(i)
+    i = i - 1
+```
+```
+i = 2
+while i <= 10:
+    print(i)
+    i = i + 2
+```
+```
+i = 1
+while i <= 5:
+    print(i)
+```
+---
+```
+count = 0
+i = 1
+while i <= 5:
+    count = count + 1
+    i = i + 1
+print(count)
+```
+```
+total = 0
+i = 1
+while i <= 3:
+    total = total + i
+    i = i + 1
+print(total)
+```
+```
+i = 10
+while i >= 1:
+    print(i)
+    i = i - 2
+```
+```
+i = 1
+while i <= 5:
+    print(i * i)
+    i = i + 1
+```
+---
+#### write
+```
+print numbers from 1 to 10 using while
+```
+```
+print numbers from 10 to 1 using while
+```
+```
+print all even numbers from 1 to 20
+```
+```
+print all odd numbers from 1 to 20
+```
+```
+find sum from 1 to 10
+```
+```
+count even numbers from 1 to 50
+```
+```
+take numbers until user enters n
+```
+```
+count how many numbers user entered
+```
+```
+find total sum of user-entered numbers
+```
+```
+count even user-entered numbers
+```
+```
+print multiplication table of 7
+```
+```
+print reverse table of 8
+```
+---
+#### challenge
+```
+find sum of even numbers entered by user
+```
+```
+count positive and negative user inputs separately
+```
+```
+keep taking marks until user says n:
+- invalid if <0 or >100
+- count pass students
+```
+```
+menu:
+1 → hello
+2 → bye
+3 → stop
+repeat until stop
+```
+---
+#### super challenge
+```
+# calculator
+repeat until user says n:
+input operator (+, -, *, /) and 2 numbers
+calculate the answer and print it
+eg, if user inputs "*", "2" and "4",
+    then the output should be 8
 ```
           </textarea>
         </section>
