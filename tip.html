@@ -52,6 +52,11 @@
                   <li><a href="#day7">Day - 7</a></li>
                   <li><a href="#day8">Day - 8</a></li>
                 </ul>
+                <h3>Week - 4</h3>
+                <ul>
+                  <li><a href="#day13">Day - 13</a></li>
+                  <li><a href="#day14">Day - 14</a></li>
+                </ul>
               </div>
             </div>
         </section>
@@ -3229,6 +3234,315 @@ input operator (+, -, *, /) and 2 numbers
 calculate the answer and print it
 eg, if user inputs "*", "2" and "4",
     then the output should be 8
+```
+          </textarea>
+        </section>
+        <!-- ############### week - 4 ############### -->
+        <!-- ======================================== -->
+        <section id="day13" data-markdown>
+          <textarea data-template># Thinking in Python</textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+## Day - 13
+### food for thought
+- till now our lists looked like this:
+```
+[10, 20, 30]
+```
+- what if data itself has rows and columns?
+- like:
+  - marks table
+  - cricket scoreboard
+  - attendance sheet
+  - seating arrangement
+---
+### concepts
+  1. nested loops
+  2. understanding outer loop and inner loop
+  3. 2D lists
+  4. accessing values in 2D lists
+  5. traversing 2D lists using nested loops
+---
+### concept - 1 (nested loops)
+```python
+for i in range(3):
+    for j in range(2):
+        print(i, j)
+```
+- loop inside another loop
+- outer loop runs first
+- inner loop runs completely every time outer loop changes
+---
+```python
+for i in range(2):
+    for j in range(3):
+        print("*")
+```
+```python
+for i in range(3):
+    print("row starts")
+    for j in range(2):
+        print(j)
+    print("row ends")
+```
+---
+### concept - 2 (understanding outer and inner loop)
+```python
+for i in range(3):
+    for j in range(2):
+        print(i, j)
+```
+visualization:
+```text
+i = 0
+    j = 0
+    j = 1
+i = 1
+    j = 0
+    j = 1
+i = 2
+    j = 0
+    j = 1
+```
+- outer loop changes slowly
+- inner loop changes quickly
+- inner loop finishes fully every time
+---
+### concept - 3 (2D lists)
+```python
+marks = [
+    [78, 82, 91],
+    [65, 70, 88],
+    [90, 95, 93]
+]
+```
+- list inside another list
+- each inner list is called a row
+- data looks like a table
+| student | english | maths | science |
+|---|---|---|---|
+| A | 78 | 82 | 91 |
+| B | 65 | 70 | 88 |
+| C | 90 | 95 | 93 |
+---
+```python
+runs = [
+    [4, 6, 1],
+    [0, 2, 4]
+]
+```
+```python
+attendance = [
+    ["P", "A", "P"],
+    ["P", "P", "P"]
+]
+```
+---
+### concept - 4 (accessing values in 2D lists)
+```python
+marks = [
+    [78, 82, 91],
+    [65, 70, 88],
+    [90, 95, 93]
+]
+print(marks[0])
+```
+- gives first row
+---
+```python
+print(marks[0][1])
+```
+- first `[0]` gives first row
+- second `[1]` gives second value from that row
+---
+```python
+print(marks[1][2])
+print(marks[2][0])
+print(marks[0][2])
+```
+---
+### concept - 5 (traversing 2D lists using nested loops)
+```python
+marks = [
+    [78, 82, 91],
+    [65, 70, 88],
+    [90, 95, 93]
+]
+for row in marks:
+    for value in row:
+        print(value)
+```
+- outer loop gives each row
+- inner loop gives each value inside row
+---
+```python
+nums = [
+    [1, 2],
+    [3, 4],
+    [5, 6]
+]
+for row in nums:
+    print(row)
+```
+---
+```python
+nums = [
+    [1, 2],
+    [3, 4],
+    [5, 6]
+]
+count = 0
+for row in nums:
+    for value in row:
+        count = count + 1
+print(count)
+```
+---
+### common mistakes
+```python
+# forgetting inner loop
+marks = [
+    [1, 2],
+    [3, 4]
+]
+for row in marks:
+    print(value)
+```
+```python
+# wrong index
+marks = [
+    [10, 20],
+    [30, 40]
+]
+print(marks[5][0])
+```
+```python
+# trying to add row directly
+marks = [
+    [10, 20],
+    [30, 40]
+]
+total = 0
+for row in marks:
+    total = total + row
+```
+---
+### homework
+#### predict
+```python
+for i in range(2):
+    for j in range(3):
+        print(i, j)
+```
+```python
+for i in range(3):
+    for j in range(2):
+        print("*")
+```
+```python
+nums = [
+    [1, 2],
+    [3, 4]
+]
+print(nums[0][1])
+```
+```python
+nums = [
+    [10, 20],
+    [30, 40]
+]
+for row in nums:
+    print(row)
+```
+---
+```python
+nums = [
+    [1, 2],
+    [3, 4]
+]
+for row in nums:
+    for value in row:
+        print(value)
+```
+```python
+nums = [
+    [1, 2, 3],
+    [4, 5, 6]
+]
+count = 0
+for row in nums:
+    for value in row:
+        count = count + 1
+print(count)
+```
+```python
+for i in range(3):
+    print("hello")
+    for j in range(2):
+        print(j)
+```
+```python
+for i in range(2):
+    for j in range(2):
+        print(i + j)
+```
+---
+#### write
+```text
+print all values from a 2D list
+```
+```text
+print only first row of a 2D list
+```
+```text
+print only first value from every row
+```
+```text
+count total values present inside a 2D list
+```
+```text
+find sum of all numbers inside a 2D list
+```
+```text
+create a 2D list storing marks of 3 students
+```
+```text
+create a 2D list storing attendance of students
+```
+```text
+print all values row by row
+```
+```text
+create a 2D list representing cricket scores
+```
+```text
+print all even numbers from a 2D list
+```
+---
+#### challenge
+```text
+find largest number inside a 2D list
+```
+```text
+count total even numbers inside a 2D list
+```
+```text
+find total marks of each student separately
+```
+---
+#### super challenge
+```text
+find highest marks percentage from marks of all students
+```
+```text
+lets say there are 5 classes in your standard,
+and each class has 20 students.
+make a 2D array of all class-students
+take a name from user
+print:
+- "found" if student exists
+- "not found" otherwise
 ```
           </textarea>
         </section>
