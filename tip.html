@@ -3081,9 +3081,7 @@ print("the sum of all numbers entered by user is ", total)
 ### concept - 4 (looping through lists using while)
 ```
 nums = [5, 10, 15]
-
 i = 0
-
 while i < 3:
     print(nums[i])
     i = i + 1
@@ -3543,6 +3541,345 @@ take a name from user
 print:
 - "found" if student exists
 - "not found" otherwise
+```
+          </textarea>
+        </section>
+        <!-- ======================================== -->
+        <section id="day14" data-markdown>
+          <textarea data-template># Thinking in Python</textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+## Day - 14
+### food for thought
+- till now inner loops repeated fixed number of times
+- what if number of repetitions changes row by row?
+- can we use loops to create shapes and patterns?
+---
+### concepts
+  1. nested loops with dependent repetition
+---
+### concept - 1 (nested loops with dependent repetition)
+```python
+for i in range(5):
+    for j in range(i):
+        print("*", end=" ")
+    print()
+```
+output:
+```text
+*
+* *
+* * *
+* * * *
+```
+- inner loop depends on outer loop
+- when `i` increases, repetitions increase
+- think row by row
+---
+### visualization
+```text
+i = 0
+    nothing
+i = 1
+    *
+i = 2
+    * *
+i = 3
+    * * *
+i = 4
+    * * * *
+```
+---
+```python
+for i in range(5):
+    for j in range(i):
+        print(j, end=" ")
+    print()
+```
+output:
+```text
+0
+0 1
+0 1 2
+0 1 2 3
+```
+---
+```python
+for i in range(5):
+    for j in range(i):
+        print("😀", end=" ")
+    print()
+```
+---
+### important idea
+when solving patterns, ask:
+- how many rows?
+- what changes in each row?
+- what stays same?
+---
+### common mistakes
+```python
+# forgetting print() for next row
+for i in range(5):
+    for j in range(i):
+        print("*", end=" ")
+```
+---
+```python
+# wrong indentation
+for i in range(5):
+    for j in range(i):
+        print("*", end=" ")
+        print()
+```
+---
+```python
+# using fixed range accidentally
+for i in range(5):
+    for j in range(5):
+        print("*", end=" ")
+    print()
+```
+---
+### showcase expectations
+- create ANY small python project
+- project does NOT need to be advanced
+- project should:
+  - work properly
+  - use concepts from course
+  - be understandable
+  - feel personal/creative
+- you will be expected to
+  - do a demo of the working code
+  - explain why you chose this project
+  - explain the code
+  - tell what you learned from doing this project
+---
+### sample mini-projects
+#### 1. number guessing game
+input:
+- user guesses number
+
+process:
+- compare with secret number
+- tell user too high / too low
+
+output:
+- success message when guessed correctly
+---
+#### 2. multiplication quiz
+input:
+- ask multiplication questions
+
+process:
+- check user answers
+- count correct answers
+
+output:
+- final score
+---
+#### 3. expense tracker
+input:
+- user enters expenses
+
+process:
+- keep total sum
+- optionally categorize expenses
+
+output:
+- total spending
+---
+#### 4. marks manager
+input:
+- marks of multiple students
+
+process:
+- calculate totals/averages
+
+output:
+- topper
+- average marks
+- pass/fail
+---
+#### 5. cricket score analyzer
+input:
+- runs scored by players
+
+process:
+- calculate total runs
+- highest scorer
+
+output:
+- match summary
+---
+#### 6. attendance system
+input:
+- present/absent entries
+
+process:
+- count attendance
+
+output:
+- attendance percentage/count
+---
+#### 7. mini chatbot
+input:
+- user messages/options
+
+process:
+- respond using if/elif
+
+output:
+- chatbot replies
+---
+### suggestions for students
+- add funny messages
+- add emojis
+- use cricket/anime/game themes
+- personalize outputs
+- experiment fearlessly
+---
+### continue your python journey 🚀
+#### practice websites
+##### 1. codingbat
+https://codingbat.com/python
+- small python problems
+- instant feedback
+- beginner friendly
+- best website to continue after this course
+---
+##### 2. practicepython
+https://www.practicepython.org
+- beginner exercises
+- step-by-step practice
+- good explanations
+---
+##### 3. checkio
+https://checkio.org
+- game-like coding challenges
+- visual and fun
+- puzzle solving using python
+---
+##### 4. replit
+https://replit.com
+- write and run python online
+- no installation needed
+- easy to experiment and share code
+---
+#### free books
+##### automate the boring stuff with python
+https://automatetheboringstuff.com
+- beginner friendly
+- teaches useful real-life automation
+- one of the best python beginner books
+---
+##### python crash course
+https://ehmatthes.github.io/pcc_2e/
+- beginner friendly
+- project based learning
+- great next step after this course
+---
+#### youtube channels
+##### corey schafer
+https://www.youtube.com/@coreyms
+- very clear explanations
+- excellent python tutorials
+---
+##### tech with tim
+https://www.youtube.com/@TechWithTim
+- python projects
+- beginner friendly
+- fun practical ideas
+---
+### important reminder ❤️
+- good programmers are NOT people who know everything
+- good programmers are people who keep solving problems step by step
+- keep experimenting
+- keep building small projects
+- keep being curious
+---
+### homework
+#### predict
+```python
+for i in range(5):
+    for j in range(i):
+        print("*", end=" ")
+    print()
+```
+```python
+for i in range(4):
+    for j in range(i):
+        print(j, end=" ")
+    print()
+```
+```python
+for i in range(3):
+    for j in range(i):
+        print("😀", end=" ")
+    print()
+```
+```python
+for i in range(5):
+    for j in range(5):
+        print("*", end=" ")
+    print()
+```
+---
+```python
+for i in range(4):
+    for j in range(i):
+        print(i, end=" ")
+    print()
+```
+```python
+for i in range(3):
+    print("row")
+    for j in range(i):
+        print(j)
+```
+```python
+for i in range(5):
+    for j in range(i):
+        print(i + j, end=" ")
+    print()
+```
+```python
+for i in range(4):
+    for j in range(i):
+        print("#")
+```
+---
+#### write
+```text
+print a triangle of stars
+```
+```text
+print:
+1
+1 2
+1 2 3
+1 2 3 4
+```
+```text
+print:
+1
+2 2
+3 3 3
+4 4 4 4
+```
+```text
+print a triangle using emojis
+```
+```text
+print reverse triangle:
+* * * *
+* * *
+* *
+*
+```
+```text
+print square pattern using nested loops
 ```
           </textarea>
         </section>
