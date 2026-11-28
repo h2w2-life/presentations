@@ -168,9 +168,9 @@ html,body{background:#fbf9f3;margin:0;overflow:hidden}
 .tri ul{list-style:none;margin:0;padding:0}
 .tri li{font-size:46px;font-weight:600;line-height:1.15;padding:34px 0 34px 0;border-top:4px solid rgba(11,37,69,.10);display:flex;align-items:center;gap:20px}
 .tri li::before{content:"";width:20px;height:20px;border-radius:50%;background:currentColor;flex:none;opacity:.9}
-.tri.stop{background:#fdecec;border-color:#efb0b0;left:100px}.tri.stop .word,.tri.stop li::before{color:var(--red)}
-.tri.keep{background:#e6f6ec;border-color:#a9dcbc;left:685px}.tri.keep .word,.tri.keep li::before{color:var(--green)}
-.tri.chg{background:#e7f0ff;border-color:#b3cdf6;left:1270px}.tri.chg .word,.tri.chg li::before{color:var(--blue)}
+.tri.stop{background:#fdecec;border-color:#efb0b0;left:1270px}.tri.stop .word,.tri.stop li::before{color:var(--red)}
+.tri.keep{background:#e6f6ec;border-color:#a9dcbc;left:100px}.tri.keep .word,.tri.keep li::before{color:var(--green)}
+.tri.chg{background:#e7f0ff;border-color:#b3cdf6;left:685px}.tri.chg .word,.tri.chg li::before{color:var(--blue)}
 .tri li{color:var(--navy)}
 .tri li::before{color:inherit}
 .tri.stop li::before{background:var(--red)}.tri.keep li::before{background:var(--green)}.tri.chg li::before{background:var(--blue)}
@@ -458,7 +458,7 @@ html,body{background:#fbf9f3;margin:0;overflow:hidden}
 <!-- ====================== 8b. HOURS OF YOUR LIFE (new) ====================== -->
 <section class="s8b">
   <style>
-    .s8b .step{position:absolute;z-index:2;left:1000px;width:820px;height:130px;border-radius:30px;background:#fff;border:5px solid var(--line);box-shadow:0 12px 26px rgba(11,37,69,.10);display:flex;align-items:center;gap:28px;padding:0 40px;box-sizing:border-box;font-size:50px;font-weight:600;color:var(--navy)}
+    .s8b .step{position:absolute;z-index:2;left:960px;width:880px;height:105px;border-radius:30px;background:#fff;border:5px solid var(--line);box-shadow:0 12px 26px rgba(11,37,69,.10);display:flex;align-items:center;gap:0;padding:0 40px;box-sizing:border-box;font-size:44px;white-space:nowrap;font-weight:600;color:var(--navy)}
     .s8b .step .op{font-size:72px;font-weight:700;color:var(--blue);width:60px;text-align:center}
     .s8b .step small{display:block;font-size:32px;font-weight:500;color:var(--muted);margin-top:4px}
     .s8b .step.hot{background:#fff6d4;border-color:#f0c64a}
@@ -487,7 +487,7 @@ html,body{background:#fbf9f3;margin:0;overflow:hidden}
         <text x="168" y="20" text-anchor="middle" font-family="Poppins" font-weight="700" font-size="52" fill="#0b2545">320 hrs</text>
       </g>
     </g>
-    <g class="fragment pop" data-fragment-index="4" style="--base:rotate(0deg)">
+    <g class="fragment pop" data-fragment-index="5" style="--base:rotate(0deg)">
       <g transform="translate(430 570) rotate(7)">
         <path d="M0 0 L66 -62 H300 V62 H66 Z" fill="#f59a4a" stroke="#c4611a" stroke-width="6" stroke-linejoin="round"/>
         <circle cx="46" cy="0" r="11" fill="#fbf9f3" stroke="#c4611a" stroke-width="5"/>
@@ -496,17 +496,19 @@ html,body{background:#fbf9f3;margin:0;overflow:hidden}
       </g>
     </g>
   </svg>
-  <div class="step fragment rise" data-fragment-index="1" style="top:230px"><span class="op"> </span><div>A ₹80,000 phone</div></div>
-  <div class="step fragment rise" data-fragment-index="2" style="top:385px"><span class="op">÷</span><div>₹250 per hour you work<small>₹40,000 a month ÷ 160 hours</small></div></div>
-  <div class="step hot fragment rise" data-fragment-index="3" style="top:540px"><span class="op">=</span><div><b>320 hours</b> of your life<small>= 8 weeks at 40 hours = 2 months</small></div></div>
-  <div class="step emi fragment rise" data-fragment-index="4" style="top:695px"><span class="op">+</span><div>On EMI: <b>350 hours</b><small>₹86,600 total, 12 months at ~15%</small></div></div>
-  <div class="abs fragment wipe" data-fragment-index="5" style="left:1000px;top:875px"><span class="brush band" style="font-size:56px;font-weight:700;line-height:1.28;padding:.2em .8em .26em">Every price tag is a time tag.</span></div>
+  <div class="step fragment rise" data-fragment-index="1" style="top:215px">You earn ₹40,000 a month</div>
+  <div class="step fragment rise" data-fragment-index="2" style="top:340px">→ that's ₹250 an hour</div>
+  <div class="step fragment rise" data-fragment-index="3" style="top:465px">₹80,000 phone ÷ ₹250 = <b>&nbsp;320 hours</b></div>
+  <div class="step hot fragment rise" data-fragment-index="4" style="top:590px">40 hrs a week → 8 weeks → <b>&nbsp;2 months</b></div>
+  <div class="step emi fragment rise" data-fragment-index="5" style="top:715px">On EMI: ₹86,600 ÷ ₹250 = <b>&nbsp;350 hours</b></div>
+  <div class="abs fragment wipe" data-fragment-index="6" style="left:960px;top:870px"><span class="brush band" style="font-size:56px;font-weight:700;line-height:1.28;padding:.2em .8em .26em">Every price tag is a time tag.</span></div>
   <aside class="notes">
     - "Our title is Buy Back Your Time. So let's measure prices in time, not rupees."
-    - [Click] Say you want an ₹80,000 phone.
-    - [Click] Your first job pays ₹40,000 a month take-home. 40 hours a week, 4 weeks = 160 hours. So every hour of your work is worth ₹250.
-    - [Click] ₹80,000 / ₹250 = 320 hours. At 40 hours a week, that is 8 weeks - two months of waking up, commuting, working - for one phone.
-    - [Click] And on EMI? 12 months at ~15% means you pay about ₹86,600 in total - about 350 hours. The EMI quietly adds almost 30 more hours of your life.
+    - [Click] Your first job pays ₹40,000 a month take-home.
+    - [Click] You work 40 hours a week, about 4 weeks a month - 160 hours. So every hour of your work is worth ₹250.
+    - [Click] Now you want an ₹80,000 phone. ₹80,000 / ₹250 = 320 hours.
+    - [Click] At 40 hours a week, 320 hours is 8 weeks - two months of waking up, commuting, working - for one phone.
+    - [Click] And on EMI? 12 months at ~15% means you pay about ₹86,600 in total. ÷ ₹250 = about 350 hours. The EMI quietly adds almost 30 more hours of your life.
     - Not saying don't buy it. Saying: know the real price. Is this phone worth two months of your life? Sometimes yes. Often, when we see it this way, no.
     - INTERACTIVE: "Think of the last big thing you bought. Divide by what you earn per hour. 10 seconds." [Pause. Ask 1-2 people.]
     - Parents: same maths for your hours - and for the coaching class, the wedding, the car.
@@ -560,11 +562,7 @@ html,body{background:#fbf9f3;margin:0;overflow:hidden}
 <!-- ====================== 10. STOP CONTINUE CHANGE ====================== -->
 <section class="s10">
   <div class="bg bg-warm"></div>
-  <h2 class="abs t" style="left:100px;top:90px;white-space:nowrap"><span style="color:var(--red)">Stop.</span> <span style="color:var(--green)">Continue.</span> <span style="color:var(--blue)">Change.</span></h2>
-  <div class="tri stop fragment rise">
-    <div class="head"><span class="badge bg-red"><svg class="ic"><use href="#i-hand"/></svg></span><span class="word">STOP</span></div>
-    <ul><li>Impulsive buys</li><li>Costly debt</li><li>Comparisons</li></ul>
-  </div>
+  <h2 class="abs t" style="left:100px;top:90px;white-space:nowrap"><span style="color:var(--green)">Continue.</span> <span style="color:var(--blue)">Change.</span> <span style="color:var(--red)">Stop.</span></h2>
   <div class="tri keep fragment rise">
     <div class="head"><span class="badge bg-green"><svg class="ic"><use href="#i-check"/></svg></span><span class="word">CONTINUE</span></div>
     <ul><li>Experiences</li><li>Learning</li><li>Health</li></ul>
@@ -573,11 +571,15 @@ html,body{background:#fbf9f3;margin:0;overflow:hidden}
     <div class="head"><span class="badge bg-blue"><svg class="ic"><use href="#i-cycle"/></svg></span><span class="word">CHANGE</span></div>
     <ul><li>Save first</li><li>Check total cost</li><li>One goal a year</li></ul>
   </div>
+  <div class="tri stop fragment rise">
+    <div class="head"><span class="badge bg-red"><svg class="ic"><use href="#i-hand"/></svg></span><span class="word">STOP</span></div>
+    <ul><li>Impulsive buys</li><li>Costly debt</li><li>Comparisons</li></ul>
+  </div>
   <aside class="notes">
-    - "Three simple words: stop, continue, change."
-    - STOP [click]: treating every want as an urgent need; taking expensive loans for things that lose value quickly; measuring your life against carefully edited images on social media.
+    - "Three simple words: continue, change, stop."
     - CONTINUE [click]: spending on experiences that truly matter; learning; investing time in health, relationships, interests. Don't lose the good things in your generation's approach to life.
     - CHANGE [click]: save something before you start spending; look at total cost, not just the monthly instalment; review forgotten subscriptions and recurring payments; make space for one goal that matters a year from now.
+    - STOP [click]: treating every want as an urgent need; taking expensive loans for things that lose value quickly; measuring your life against carefully edited images on social media.
     - Don't change your whole financial life tomorrow. Choose ONE repeated behaviour. [Pause.]
     - Small decisions repeated become habits; habits shape the choices available later.
     - Optional quote: "We are what we repeatedly do. Excellence, then, is not an act, but a habit." Often attributed to Aristotle; actually Will Durant's summary of his ideas.
